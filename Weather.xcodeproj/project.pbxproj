@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6227EC1F2485B4007FC5FB /* ChartCell.swift */; };
+		CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6227F21F2486D8007FC5FB /* HeaderView.xib */; };
+		CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6227F61F24872C007FC5FB /* ChartCell.xib */; };
+		CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */; };
+		CC6228151F24A011007FC5FB /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6228101F2492DD007FC5FB /* Charts.framework */; };
+		CC6228171F24A023007FC5FB /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6228101F2492DD007FC5FB /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C0E1F223248002B1273 /* TemperatureCell.swift */; };
+		CCA40C111F2232A6002B1273 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA40C101F2232A6002B1273 /* TemperatureCell.xib */; };
+		CCA40C191F223572002B1273 /* EnumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C181F223572002B1273 /* EnumModel.swift */; };
+		CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */; };
 		CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */; };
 		CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91571F210CA6003ACCA2 /* ViewController.swift */; };
 		CCCC915B1F210CA6003ACCA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC91591F210CA6003ACCA2 /* Main.storyboard */; };
@@ -16,7 +26,6 @@
 		CCCC91761F210CA6003ACCA2 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */; };
 		E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E631801F219B9A005FAD1D /* HeaderView.swift */; };
 		E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E633A21F2200AF005FAD1D /* MainTableView.swift */; };
-		E6E633A51F22023A005FAD1D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E633A41F22023A005FAD1D /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CC6228181F24A023007FC5FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CC6228171F24A023007FC5FB /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CC6227EC1F2485B4007FC5FB /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		CC6227F21F2486D8007FC5FB /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		CC6227F61F24872C007FC5FB /* ChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
+		CC6228101F2492DD007FC5FB /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
+		CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleLinesChartView.swift; sourceTree = "<group>"; };
+		CCA40C0E1F223248002B1273 /* TemperatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureCell.swift; sourceTree = "<group>"; };
+		CCA40C101F2232A6002B1273 /* TemperatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureCell.xib; sourceTree = "<group>"; };
+		CCA40C181F223572002B1273 /* EnumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumModel.swift; sourceTree = "<group>"; };
+		CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnnularProgress.swift; sourceTree = "<group>"; };
 		CCCC91521F210CA6003ACCA2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCCC91571F210CA6003ACCA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +84,6 @@
 		CCCC91771F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E631801F219B9A005FAD1D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E6E633A21F2200AF005FAD1D /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
-		E6E633A41F22023A005FAD1D /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6228151F24A011007FC5FB /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC6227FB1F248FF1007FC5FB /* depends */ = {
+			isa = PBXGroup;
+			children = (
+				CC6228101F2492DD007FC5FB /* Charts.framework */,
+			);
+			path = depends;
+			sourceTree = "<group>";
+		};
+		CCA40C171F223572002B1273 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCA40C181F223572002B1273 /* EnumModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CCCC91491F210CA6003ACCA2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +153,8 @@
 			children = (
 				CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */,
 				CCCC91571F210CA6003ACCA2 /* ViewController.swift */,
+				CC6227FB1F248FF1007FC5FB /* depends */,
+				CCA40C171F223572002B1273 /* Model */,
 				E6E6317F1F219B9A005FAD1D /* view */,
 				E6E6317E1F219929005FAD1D /* nib */,
 				CCCC91591F210CA6003ACCA2 /* Main.storyboard */,
@@ -136,7 +186,9 @@
 		E6E6317E1F219929005FAD1D /* nib */ = {
 			isa = PBXGroup;
 			children = (
-				E6E633A41F22023A005FAD1D /* HeaderView.xib */,
+				CC6227F21F2486D8007FC5FB /* HeaderView.xib */,
+				CC6227F61F24872C007FC5FB /* ChartCell.xib */,
+				CCA40C101F2232A6002B1273 /* TemperatureCell.xib */,
 			);
 			path = nib;
 			sourceTree = "<group>";
@@ -146,6 +198,10 @@
 			children = (
 				E6E631801F219B9A005FAD1D /* HeaderView.swift */,
 				E6E633A21F2200AF005FAD1D /* MainTableView.swift */,
+				CCA40C0E1F223248002B1273 /* TemperatureCell.swift */,
+				CC6227EC1F2485B4007FC5FB /* ChartCell.swift */,
+				CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */,
+				CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -160,6 +216,7 @@
 				CCCC914E1F210CA6003ACCA2 /* Sources */,
 				CCCC914F1F210CA6003ACCA2 /* Frameworks */,
 				CCCC91501F210CA6003ACCA2 /* Resources */,
+				CC6228181F24A023007FC5FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +275,7 @@
 				TargetAttributes = {
 					CCCC91511F210CA6003ACCA2 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = FQVXX46TGF;
+						DevelopmentTeam = 8ZX32FES47;
 						ProvisioningStyle = Automatic;
 					};
 					CCCC91651F210CA6003ACCA2 = {
@@ -262,8 +319,10 @@
 			files = (
 				CCCC91601F210CA6003ACCA2 /* LaunchScreen.storyboard in Resources */,
 				CCCC915D1F210CA6003ACCA2 /* Assets.xcassets in Resources */,
+				CCA40C111F2232A6002B1273 /* TemperatureCell.xib in Resources */,
+				CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */,
+				CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */,
 				CCCC915B1F210CA6003ACCA2 /* Main.storyboard in Resources */,
-				E6E633A51F22023A005FAD1D /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */,
 				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
+				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
+				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
+				CCA40C191F223572002B1273 /* EnumModel.swift in Sources */,
+				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
 				E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */,
 				CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */,
@@ -445,7 +509,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FQVXX46TGF;
+				DEVELOPMENT_TEAM = 8ZX32FES47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Weather/depends",
+				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fanwei.Weather;
@@ -458,7 +526,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FQVXX46TGF;
+				DEVELOPMENT_TEAM = 8ZX32FES47;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Weather/depends",
+				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fanwei.Weather;
