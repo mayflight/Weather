@@ -10,6 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
 
-
-
+    @IBOutlet weak var suggestLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
 }

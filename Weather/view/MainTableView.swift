@@ -13,8 +13,9 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
     override func awakeFromNib() {
         self.delegate = self;
         self.dataSource = self;
+        self.register(UINib.init(nibName: "TemperatureCell", bundle: nil), forCellReuseIdentifier: CellIdentify.tempearture.rawValue)
+        self.register(UINib.init(nibName: "ChartCell", bundle: nil), forCellReuseIdentifier: CellIdentify.chartCell.rawValue)
     }
-    
   
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -34,7 +35,21 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            guard  let cell =  tableView.dequeueReusableCell(withIdentifier: CellIdentify.tempearture.rawValue) as? TemperatureCell else {
+                return UITableViewCell()
+                
+            }
+            return cell;
+        }
+        if indexPath.row == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.chartCell.rawValue) as? ChartCell else {
+                return UITableViewCell()
+            }
+            return cell
+        }
         return UITableViewCell()
+        
     }
     
    
