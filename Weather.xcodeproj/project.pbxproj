@@ -24,6 +24,9 @@
 		CCCC91601F210CA6003ACCA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */; };
 		CCCC916B1F210CA6003ACCA2 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC916A1F210CA6003ACCA2 /* WeatherTests.swift */; };
 		CCCC91761F210CA6003ACCA2 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */; };
+		E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A08F1F26E65000633EC8 /* WindCell.swift */; };
+		E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A0911F26E67400633EC8 /* WindCell.xib */; };
+		E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */; };
 		E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E631801F219B9A005FAD1D /* HeaderView.swift */; };
 		E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E633A21F2200AF005FAD1D /* MainTableView.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,9 @@
 		CCCC91711F210CA6003ACCA2 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		CCCC91771F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6B1A08F1F26E65000633EC8 /* WindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindCell.swift; sourceTree = "<group>"; };
+		E6B1A0911F26E67400633EC8 /* WindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindCell.xib; sourceTree = "<group>"; };
+		E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsProtocol.swift; sourceTree = "<group>"; };
 		E6E631801F219B9A005FAD1D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E6E633A21F2200AF005FAD1D /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +159,7 @@
 			children = (
 				CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */,
 				CCCC91571F210CA6003ACCA2 /* ViewController.swift */,
+				E6B1A0931F26F0C400633EC8 /* Tools */,
 				CC6227FB1F248FF1007FC5FB /* depends */,
 				CCA40C171F223572002B1273 /* Model */,
 				E6E6317F1F219B9A005FAD1D /* view */,
@@ -183,12 +190,21 @@
 			path = WeatherUITests;
 			sourceTree = "<group>";
 		};
+		E6B1A0931F26F0C400633EC8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		E6E6317E1F219929005FAD1D /* nib */ = {
 			isa = PBXGroup;
 			children = (
 				CC6227F21F2486D8007FC5FB /* HeaderView.xib */,
 				CC6227F61F24872C007FC5FB /* ChartCell.xib */,
 				CCA40C101F2232A6002B1273 /* TemperatureCell.xib */,
+				E6B1A0911F26E67400633EC8 /* WindCell.xib */,
 			);
 			path = nib;
 			sourceTree = "<group>";
@@ -200,6 +216,7 @@
 				E6E633A21F2200AF005FAD1D /* MainTableView.swift */,
 				CCA40C0E1F223248002B1273 /* TemperatureCell.swift */,
 				CC6227EC1F2485B4007FC5FB /* ChartCell.swift */,
+				E6B1A08F1F26E65000633EC8 /* WindCell.swift */,
 				CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */,
 				CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */,
 			);
@@ -322,6 +339,7 @@
 				CCA40C111F2232A6002B1273 /* TemperatureCell.xib in Resources */,
 				CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */,
 				CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */,
+				E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */,
 				CCCC915B1F210CA6003ACCA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,10 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */,
+				E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */,
 				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
 				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
 				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
 				CCA40C191F223572002B1273 /* EnumModel.swift in Sources */,
+				E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */,
 				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
 				E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */,

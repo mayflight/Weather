@@ -11,4 +11,5 @@ import Foundation
 enum CellIdentify:String{
     case tempearture
     case chartCell
+    case windCell
 }

@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="536" height="212"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-9U-up1">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-9U-up1">
                     <rect key="frame" x="0.0" y="0.0" width="536" height="212"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-iT-ocM">
@@ -85,6 +85,6 @@
         </view>
     </objects>
     <resources>
-        <image name="background" width="660" height="459"/>
+        <image name="wind" width="1324" height="1781"/>
     </resources>
 </document>

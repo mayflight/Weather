@@ -15,6 +15,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
         self.dataSource = self;
         self.register(UINib.init(nibName: "TemperatureCell", bundle: nil), forCellReuseIdentifier: CellIdentify.tempearture.rawValue)
         self.register(UINib.init(nibName: "ChartCell", bundle: nil), forCellReuseIdentifier: CellIdentify.chartCell.rawValue)
+        self.register(UINib.init(nibName: "WindCell", bundle: nil), forCellReuseIdentifier: CellIdentify.windCell.rawValue)
     }
   
     
@@ -41,17 +42,31 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
                 
             }
             return cell;
-        }
-        if indexPath.row == 1 {
+        }else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.chartCell.rawValue) as? ChartCell else {
                 return UITableViewCell()
             }
             return cell
+        }else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.windCell.rawValue) else {
+                return UITableViewCell()
+            }
+            return cell;
         }
-        return UITableViewCell()
+        
+        
         
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row != 2 {
+            return
+        }
+        guard let windCell = cell as? WindCell else {
+            return
+        }
+        windCell.animate()
+    }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
