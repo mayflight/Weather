@@ -1,73 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="Weather" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="412" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="536" height="212"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-9U-up1">
-                    <rect key="frame" x="0.0" y="0.0" width="412" height="200"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-9U-up1">
+                    <rect key="frame" x="0.0" y="0.0" width="536" height="212"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-hy-pHg">
-                    <rect key="frame" x="0.0" y="99" width="412" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.53631132841110229" green="0.91549408435821533" blue="0.58385509252548218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-iT-ocM">
-                    <rect key="frame" x="268" y="25" width="98.5" height="24.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-iT-ocM">
+                    <rect key="frame" x="0.0" y="146" width="268" height="26"/>
                     <attributedString key="attributedText">
                         <fragment content="25日星期5">
                             <attributes>
-                                <color key="NSColor" red="0.045749910175800323" green="0.92728394269943237" blue="0.92192190885543823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="21" name="STXingkaiSC-Bold"/>
+                                <color key="NSColor" red="0.92727999999999999" green="0.23030359308767487" blue="0.21850192520574305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="22" name="HanziPenSC-W3"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-5G-nzW">
-                    <rect key="frame" x="45.5" y="25" width="25.5" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晴" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-5G-nzW">
+                    <rect key="frame" x="0.0" y="91.5" width="268" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" red="0.9915502667427063" green="0.084751687943935394" blue="0.0062101543880999088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杭州" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-RI-a2k">
+                    <rect key="frame" x="0.0" y="39" width="268" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="0.9915502667427063" green="0.084751687943935394" blue="0.0062101543880999088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-hy-pHg">
+                    <rect key="frame" x="268" y="0.0" width="253" height="212"/>
+                    <fontDescription key="fontDescription" name="STLibianSC-Regular" family="Libian SC" pointSize="17"/>
+                    <color key="textColor" red="0.073816977441310883" green="0.72915869951248169" blue="0.81397873163223267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AdN-iT-ocM" firstAttribute="top" secondItem="az2-5G-nzW" secondAttribute="top" id="1gv-Qu-asm"/>
-                <constraint firstItem="rJX-9U-up1" firstAttribute="leading" secondItem="az2-5G-nzW" secondAttribute="trailing" constant="-71" id="53x-4L-CAC"/>
-                <constraint firstItem="rJX-9U-up1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CnD-gR-Ilc"/>
-                <constraint firstItem="AdN-iT-ocM" firstAttribute="leading" secondItem="rJX-9U-up1" secondAttribute="trailing" constant="-144" id="D7C-P7-kqp"/>
-                <constraint firstAttribute="trailing" secondItem="rJX-9U-up1" secondAttribute="trailing" id="HOu-a3-Xv0"/>
-                <constraint firstItem="rJX-9U-up1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aP0-fP-jj2"/>
-                <constraint firstItem="ESR-hy-pHg" firstAttribute="top" secondItem="rJX-9U-up1" secondAttribute="bottom" constant="-101" id="cRG-sn-Myp"/>
-                <constraint firstAttribute="trailing" secondItem="ESR-hy-pHg" secondAttribute="trailing" id="i9H-eW-0R4"/>
-                <constraint firstItem="rJX-9U-up1" firstAttribute="top" secondItem="az2-5G-nzW" secondAttribute="bottom" constant="-55" id="jns-RY-4Vw"/>
-                <constraint firstAttribute="bottom" secondItem="rJX-9U-up1" secondAttribute="bottom" id="pzI-Jz-rJf"/>
-                <constraint firstItem="ESR-hy-pHg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xAq-8r-62g"/>
+                <constraint firstItem="az2-5G-nzW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="16M-8f-Srg"/>
+                <constraint firstItem="rJX-9U-up1" firstAttribute="centerX" secondItem="UVg-RI-a2k" secondAttribute="trailing" id="3cC-tZ-J3f"/>
+                <constraint firstAttribute="bottom" secondItem="ESR-hy-pHg" secondAttribute="bottom" id="3vP-dj-m0e"/>
+                <constraint firstItem="ESR-hy-pHg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9F1-aK-LAR"/>
+                <constraint firstAttribute="trailing" secondItem="ESR-hy-pHg" secondAttribute="trailing" constant="15" id="9g1-m7-TQA"/>
+                <constraint firstAttribute="trailing" secondItem="rJX-9U-up1" secondAttribute="trailing" id="DfJ-JI-lcI"/>
+                <constraint firstItem="az2-5G-nzW" firstAttribute="width" secondItem="UVg-RI-a2k" secondAttribute="width" id="Dqx-np-YPe"/>
+                <constraint firstItem="AdN-iT-ocM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.5" id="Ehp-zc-QxH"/>
+                <constraint firstItem="ESR-hy-pHg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I3M-jf-crV"/>
+                <constraint firstItem="rJX-9U-up1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LNM-qa-ZG1"/>
+                <constraint firstItem="az2-5G-nzW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LgJ-cn-K4h"/>
+                <constraint firstItem="rJX-9U-up1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MOh-fB-WEm"/>
+                <constraint firstAttribute="bottom" secondItem="rJX-9U-up1" secondAttribute="bottom" id="XnK-KV-iKb"/>
+                <constraint firstItem="AdN-iT-ocM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Z8c-h5-OOD"/>
+                <constraint firstItem="AdN-iT-ocM" firstAttribute="width" secondItem="UVg-RI-a2k" secondAttribute="width" id="cLy-zN-dSs"/>
+                <constraint firstItem="ESR-hy-pHg" firstAttribute="leading" secondItem="rJX-9U-up1" secondAttribute="centerX" id="diW-y3-Dhm"/>
+                <constraint firstItem="UVg-RI-a2k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eK0-ST-ZhI"/>
+                <constraint firstItem="UVg-RI-a2k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.5" id="yIf-1a-foJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="cityLabel" destination="UVg-RI-a2k" id="TsA-S7-PTw"/>
                 <outlet property="dateTimeLabel" destination="AdN-iT-ocM" id="8CQ-Hm-adF"/>
                 <outlet property="suggestLabel" destination="ESR-hy-pHg" id="L6j-JT-wTA"/>
                 <outlet property="weatherLabel" destination="az2-5G-nzW" id="V1Y-x1-s0C"/>
             </connections>
-            <point key="canvasLocation" x="52" y="-179"/>
+            <point key="canvasLocation" x="120" y="-173"/>
         </view>
     </objects>
     <resources>
-        <image name="sun" width="1024" height="739"/>
+        <image name="background" width="660" height="459"/>
     </resources>
 </document>

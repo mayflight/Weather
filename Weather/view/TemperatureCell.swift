@@ -14,6 +14,7 @@ class TemperatureCell: UITableViewCell {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clear
         self.contentView.backgroundColor = UIColor.clear
+        self.selectionStyle = .none
     }
 
     

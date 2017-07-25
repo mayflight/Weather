@@ -9,43 +9,68 @@
 import UIKit
 import Charts
 class MultipleLinesChartView: LineChartView{
+    
     override func awakeFromNib() {
-        
         self.noDataText = "暂无数据"
+        self.chartDescription?.text = "峰谷温度走势"
         self.leftAxis.enabled = false
         self.rightAxis.drawAxisLineEnabled = false
         self.rightAxis.drawGridLinesEnabled = false
         self.xAxis.drawAxisLineEnabled = false
         self.xAxis.drawGridLinesEnabled = false
-        self.xAxis.labelPosition = .bottom
-        
         self.drawGridBackgroundEnabled = false
         self.drawBordersEnabled = false
-        self.dragEnabled = false
-        self.setScaleEnabled(true)
+        self.dragEnabled = true
+        self.setScaleEnabled(false)
         self.pinchZoomEnabled = false
         self.legend.horizontalAlignment = .right
         self.legend.verticalAlignment = .top
         self.legend.orientation = .vertical
         self.legend.drawInside = false
+        self.xAxis.granularity = 1
+        self.xAxis.labelCount = 5
+        self.xAxis.drawAxisLineEnabled = true
+        self.xAxis.labelPosition = .bottom
+        setLineData([40,38,37,39,38], [30,29,27,28,26], ["7月24","7月25","7月26","7月27","7月28"])
+    }
+    
+    func setLineData(_ hight:[Double],_ lower:[Double],_ dates:[String]) {
+        self.xAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
+            
+            return "\(dates[(Int(index))])"
+        })
+        self.rightAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
+            return "\(index)℃"
+        })
         
-        self.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["7月1","7月2","7月3","7月4","7月5"])
-        
-        let line =  LineChartDataSet(values: [ChartDataEntry(x: 1, y: 1.2),ChartDataEntry(x: 2, y: 4.2),ChartDataEntry(x: 3, y: 3.1),ChartDataEntry(x: 4, y: 5.2),ChartDataEntry(x: 5, y: 2.2)], label: "温度")
-        
-        line.lineWidth = 2
-        line.circleRadius = 2
-        line.circleHoleRadius = 1
-        line.lineDashLengths = [5,5]
-        line.colors = [UIColor.red,UIColor.red,UIColor.red,UIColor.red,UIColor.red]
-        line.setCircleColor(UIColor.green)
-        let data = LineChartData(dataSets: [line])
+        let lineHigh = getLine(datas: hight, colors:append(UIColor.red, 5), text: "最高温度")
+        let lineLow = getLine(datas: lower, colors: append(UIColor.init(red: 38.0/255, green: 186.0/255, blue: 206.0/255, alpha: 1), 5), text: "最低温度")
+        let data = LineChartData(dataSets: [lineHigh,lineLow])
         data.setValueFont(UIFont.systemFont(ofSize: 7))
         self.data = data
     }
     
-    func setLineData(_ hightLines:[Double],_lower:[Double]) {
-        
+    func getLine(datas:[Double],colors:[UIColor],text:String) -> LineChartDataSet {
+        let dataEntrys:[ChartDataEntry] = datas.enumerated().map { (index,value) -> ChartDataEntry in
+            return ChartDataEntry(x: Double(index), y: value)
+        }
+        let line = LineChartDataSet(values: dataEntrys, label: text)
+        line.lineWidth = 2
+        line.circleRadius = 2
+        line.circleHoleRadius = 1
+        line.lineDashLengths = [5,5]
+        line.colors = colors
+        line.setCircleColor(UIColor.green)
+        return line
     }
     
+    func append<T>(_ value:T,_ count:Int) -> [T] {
+        var array:[T] = Array()
+        var i = 0
+        while i <= count {
+            array.append(value)
+            i += 1
+        }
+        return array
+    }
 }

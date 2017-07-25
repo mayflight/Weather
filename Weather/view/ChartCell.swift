@@ -14,6 +14,7 @@ class ChartCell: UITableViewCell {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clear
         self.contentView.backgroundColor = UIColor.clear
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
