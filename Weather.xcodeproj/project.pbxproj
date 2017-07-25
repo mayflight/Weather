@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC589E5B1F27888800B85CCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; };
+		CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; };
+		CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC589E611F278F2100B85CCE /* SwiftyJSON.swift */; };
 		CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6227EC1F2485B4007FC5FB /* ChartCell.swift */; };
 		CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6227F21F2486D8007FC5FB /* HeaderView.xib */; };
 		CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6227F61F24872C007FC5FB /* ChartCell.xib */; };
 		CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */; };
-		CC6228151F24A011007FC5FB /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6228101F2492DD007FC5FB /* Charts.framework */; };
-		CC6228171F24A023007FC5FB /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6228101F2492DD007FC5FB /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C0E1F223248002B1273 /* TemperatureCell.swift */; };
 		CCA40C111F2232A6002B1273 /* TemperatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA40C101F2232A6002B1273 /* TemperatureCell.xib */; };
 		CCA40C191F223572002B1273 /* EnumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C181F223572002B1273 /* EnumModel.swift */; };
@@ -114,8 +116,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC6228171F24A023007FC5FB /* Charts.framework in Embed Frameworks */,
 				E6B1A1561F274C7700633EC8 /* Alamofire.framework in Embed Frameworks */,
+				CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,10 +125,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC589E5A1F27888800B85CCE /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
+		CC589E611F278F2100B85CCE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CC6227EC1F2485B4007FC5FB /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		CC6227F21F2486D8007FC5FB /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		CC6227F61F24872C007FC5FB /* ChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
-		CC6228101F2492DD007FC5FB /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleLinesChartView.swift; sourceTree = "<group>"; };
 		CCA40C0E1F223248002B1273 /* TemperatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureCell.swift; sourceTree = "<group>"; };
 		CCA40C101F2232A6002B1273 /* TemperatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureCell.xib; sourceTree = "<group>"; };
@@ -159,8 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6228151F24A011007FC5FB /* Charts.framework in Frameworks */,
+				CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */,
 				E6B1A1551F274C7700633EC8 /* Alamofire.framework in Frameworks */,
+				CC589E5B1F27888800B85CCE /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +188,9 @@
 		CC6227FB1F248FF1007FC5FB /* depends */ = {
 			isa = PBXGroup;
 			children = (
+				CC589E611F278F2100B85CCE /* SwiftyJSON.swift */,
+				CC589E5A1F27888800B85CCE /* Charts.framework */,
 				E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */,
-				CC6228101F2492DD007FC5FB /* Charts.framework */,
 			);
 			path = depends;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
 				E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */,
+				CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */,
 				CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
