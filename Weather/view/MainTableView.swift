@@ -18,9 +18,8 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
         self.register(UINib.init(nibName: "WindCell", bundle: nil), forCellReuseIdentifier: CellIdentify.windCell.rawValue)
     }
   
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
+        return 150
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -32,14 +31,12 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard  let cell =  tableView.dequeueReusableCell(withIdentifier: CellIdentify.tempearture.rawValue) as? TemperatureCell else {
                 return UITableViewCell()
-                
             }
             return cell;
         }else if indexPath.row == 1 {
@@ -48,7 +45,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
             }
             return cell
         }else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.windCell.rawValue) else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.windCell.rawValue) as? WindCell else {
                 return UITableViewCell()
             }
             return cell;

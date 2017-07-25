@@ -8,13 +8,13 @@
 
 import Foundation
 import UIKit
-
-protocol SizeProtocol {
+import Alamofire
+protocol Sizeable {
     var width:CGFloat {get}
     var height:CGFloat {get}
 }
 
-extension SizeProtocol where Self:UIView {
+extension Sizeable where Self:UIView {
     var width:CGFloat {
         return  self.frame.size.width
     }
@@ -23,11 +23,11 @@ extension SizeProtocol where Self:UIView {
     }
 }
 
-protocol BezierPathAnimateProtocol {
+protocol BezierPathAnimateable {
     func bezierAnimate(_ view:UIView,points fourpoints:[CGPoint])
 }
 
-extension BezierPathAnimateProtocol where Self : UIView{
+extension BezierPathAnimateable where Self : UIView{
     func bezierAnimate(_ view:UIView,points fourpoints:[CGPoint]) {
         guard fourpoints.count <= 4 else {
             return
@@ -41,5 +41,14 @@ extension BezierPathAnimateProtocol where Self : UIView{
         animate.repeatCount = HUGE
         animate.rotationMode = kCAAnimationRotateAuto
         view.layer.add(animate, forKey: "Move")
+    }
+}
+
+protocol Networkable {
+    func getRequest(url:String,_ params:[AnyObject])
+}
+extension Networkable {
+    func getRequest(url:String,_ params:[String:String]) {
+        //https://github.com/Alamofire/Alamofire#features
     }
 }

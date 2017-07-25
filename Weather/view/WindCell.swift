@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WindCell: UITableViewCell,BezierPathAnimateProtocol,SizeProtocol {
+class WindCell: UITableViewCell,BezierPathAnimateable,Sizeable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
