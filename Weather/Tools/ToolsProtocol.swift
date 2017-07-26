@@ -45,17 +45,20 @@ extension BezierPathAnimateable where Self : UIView{
 }
 
 protocol Networkable {
-    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (JSON)->())
+    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (String?)->())
 }
 extension Networkable {
-    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (JSON)->()) {
-        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (respones) in
+    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (String?)->()) {        
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseString { (respones) in
+                if respones.result.isFailure {
+                    return
+                }
             
-            guard let json = respones.result.value else{
-                return
-            }
-            let jsonData = JSON(json)
-            callBack(jsonData)
+                guard let json = respones.result.value else{
+                    return
+                }
+                callBack(json)
+            
         }
     }
 }

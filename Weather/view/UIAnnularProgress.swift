@@ -15,7 +15,7 @@ struct ProgressProperty{
     var progressColor :UIColor
     var progressStart:CGFloat
     var progressEnd:CGFloat
-    
+    var text:String?
     
     init(width:CGFloat,progressEnd:CGFloat,progressColor:UIColor) {
         self.width = width
@@ -49,7 +49,7 @@ class UIAnnularProgress: UIView {
     
     
     required init?(coder aDecoder: NSCoder) {
-        progressProperty = ProgressProperty.init(width: 10, progressEnd: 0.36, progressColor: UIColor.green)
+        progressProperty = ProgressProperty.init(width: 10, progressEnd: 0, progressColor: UIColor.green)
         super.init(coder: aDecoder)
     }
     
@@ -64,7 +64,6 @@ class UIAnnularProgress: UIView {
         trackLayer.path = path
         layer.addSublayer(trackLayer)
         
-        let text = "气温:36℃"
         let style = NSMutableParagraphStyle.init()
         style.alignment = .center
         
@@ -72,10 +71,7 @@ class UIAnnularProgress: UIView {
                           NSForegroundColorAttributeName: UIColor.orange,
                           NSParagraphStyleAttributeName: style]
         let frame = CGRect(x: 0, y: bounds.size.height/2-30, width: bounds.size.width, height: 60)
-        text.draw(in:frame, withAttributes:attributes)
-        
-        
- 
+        progressProperty.text?.draw(in:frame, withAttributes:attributes)
         
         progressLayer.frame = bounds
         progressLayer.fillColor = UIColor.clear.cgColor
@@ -85,18 +81,21 @@ class UIAnnularProgress: UIView {
         progressLayer.strokeStart = progressProperty.progressStart
         progressLayer.strokeEnd = progressProperty.progressEnd
         layer.addSublayer(progressLayer)
-        
-    
     }
     
     
-    func setProgress(progress:CGFloat,time:CFTimeInterval,animate:Bool) {
+    func setProgress(progress:Float,time:CFTimeInterval,animate:Bool) {
         CATransaction.begin()
         CATransaction.setDisableActions(!animate)
         CATransaction.setAnimationDuration(time)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-        progressLayer.strokeEnd = progress
+        progressLayer.strokeEnd = CGFloat(progress)
         CATransaction.commit()
-        
+    }
+    
+    func updateContent(progress:Float,_ text:String?)  {
+        progressProperty.text = text
+        setNeedsDisplay()
+        setProgress(progress: progress, time: 3, animate: true)
     }
 }

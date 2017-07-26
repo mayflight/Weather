@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC589E5B1F27888800B85CCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; };
 		CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; };
 		CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC589E611F278F2100B85CCE /* SwiftyJSON.swift */; };
@@ -32,6 +31,8 @@
 		E6B1A0971F27346B00633EC8 /* StruceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A0961F27346B00633EC8 /* StruceModel.swift */; };
 		E6B1A1551F274C7700633EC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B1A1481F274B9000633EC8 /* Alamofire.framework */; };
 		E6B1A1561F274C7700633EC8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6B1A1481F274B9000633EC8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6BD01291F287CE4007BC048 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BD011A1F287C70007BC048 /* HandyJSON.framework */; };
+		E6BD012A1F287CE4007BC048 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BD011A1F287C70007BC048 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E631801F219B9A005FAD1D /* HeaderView.swift */; };
 		E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E633A21F2200AF005FAD1D /* MainTableView.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,69 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		E6BD01191F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21520C441D3341B200F53111;
+			remoteInfo = "HandyJSON iOS";
+		};
+		E6BD011B1F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21520C5B1D3344A900F53111;
+			remoteInfo = HandyJSONDemo;
+		};
+		E6BD011D1F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217B046D1D571B9F0035A8E2;
+			remoteInfo = "HandyJSON iOS Tests";
+		};
+		E6BD011F1F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0F9B1DA1650E00B3BC12;
+			remoteInfo = "HandyJSON watchOS";
+		};
+		E6BD01211F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FB11DA2441E00B3BC12;
+			remoteInfo = "HandyJSON tvOS";
+		};
+		E6BD01231F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FB91DA2441E00B3BC12;
+			remoteInfo = "HandyJSON tvOS Tests";
+		};
+		E6BD01251F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FE11DA2494F00B3BC12;
+			remoteInfo = "HandyJSON macOS";
+		};
+		E6BD01271F287C70007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 393E0FE91DA2494F00B3BC12;
+			remoteInfo = "HandyJSON macOS Tests";
+		};
+		E6BD012B1F287CE4007BC048 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 21520C431D3341B200F53111;
+			remoteInfo = "HandyJSON iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,6 +181,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E6B1A1561F274C7700633EC8 /* Alamofire.framework in Embed Frameworks */,
+				E6BD012A1F287CE4007BC048 /* HandyJSON.framework in Embed Frameworks */,
 				CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -153,6 +218,7 @@
 		E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsProtocol.swift; sourceTree = "<group>"; };
 		E6B1A0961F27346B00633EC8 /* StruceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StruceModel.swift; sourceTree = "<group>"; };
 		E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HandyJSON.xcodeproj; path = HandyJSON/HandyJSON.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E6E631801F219B9A005FAD1D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E6E633A21F2200AF005FAD1D /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */,
+				E6BD01291F287CE4007BC048 /* HandyJSON.framework in Frameworks */,
 				E6B1A1551F274C7700633EC8 /* Alamofire.framework in Frameworks */,
-				CC589E5B1F27888800B85CCE /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +254,7 @@
 		CC6227FB1F248FF1007FC5FB /* depends */ = {
 			isa = PBXGroup;
 			children = (
+				E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */,
 				CC589E611F278F2100B85CCE /* SwiftyJSON.swift */,
 				CC589E5A1F27888800B85CCE /* Charts.framework */,
 				E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */,
@@ -282,6 +349,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E6BD01081F287C6F007BC048 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6BD011A1F287C70007BC048 /* HandyJSON.framework */,
+				E6BD011C1F287C70007BC048 /* HandyJSONDemo.app */,
+				E6BD011E1F287C70007BC048 /* HandyJSON iOS Tests.xctest */,
+				E6BD01201F287C70007BC048 /* HandyJSON.framework */,
+				E6BD01221F287C70007BC048 /* HandyJSON.framework */,
+				E6BD01241F287C70007BC048 /* HandyJSON tvOS Tests.xctest */,
+				E6BD01261F287C70007BC048 /* HandyJSON.framework */,
+				E6BD01281F287C70007BC048 /* HandyJSON macOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E6E6317E1F219929005FAD1D /* nib */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +405,7 @@
 			);
 			dependencies = (
 				E6B1A1581F274C7700633EC8 /* PBXTargetDependency */,
+				E6BD012C1F287CE4007BC048 /* PBXTargetDependency */,
 			);
 			name = Weather;
 			productName = Weather;
@@ -410,6 +493,10 @@
 					ProductGroup = E6B1A13D1F274B9000633EC8 /* Products */;
 					ProjectRef = E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = E6BD01081F287C6F007BC048 /* Products */;
+					ProjectRef = E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -468,6 +555,62 @@
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
 			remoteRef = E6B1A1531F274B9000633EC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD011A1F287C70007BC048 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = E6BD01191F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD011C1F287C70007BC048 /* HandyJSONDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HandyJSONDemo.app;
+			remoteRef = E6BD011B1F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD011E1F287C70007BC048 /* HandyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON iOS Tests.xctest";
+			remoteRef = E6BD011D1F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD01201F287C70007BC048 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = E6BD011F1F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD01221F287C70007BC048 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = E6BD01211F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD01241F287C70007BC048 /* HandyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON tvOS Tests.xctest";
+			remoteRef = E6BD01231F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD01261F287C70007BC048 /* HandyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HandyJSON.framework;
+			remoteRef = E6BD01251F287C70007BC048 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6BD01281F287C70007BC048 /* HandyJSON macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HandyJSON macOS Tests.xctest";
+			remoteRef = E6BD01271F287C70007BC048 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -557,6 +700,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = E6B1A1571F274C7700633EC8 /* PBXContainerItemProxy */;
+		};
+		E6BD012C1F287CE4007BC048 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HandyJSON iOS";
+			targetProxy = E6BD012B1F287CE4007BC048 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

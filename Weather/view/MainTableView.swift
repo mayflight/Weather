@@ -10,6 +10,12 @@ import UIKit
 
 class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
 
+    var descript:String?
+    var temperature:Float?
+    var city:String?
+    var weather:String?
+    var date:String?
+    
     override func awakeFromNib() {
         self.delegate = self;
         self.dataSource = self;
@@ -23,9 +29,14 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.last as? UIView else {
+        guard let headerView = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.last as? HeaderView else {
             return UIView()
         }
+        headerView.suggestLabel.text = descript
+        headerView.cityLabel.text = city
+        headerView.dateTimeLabel.text = date
+        headerView.weatherLabel.text = weather
+        
         return headerView
     }
     
@@ -38,6 +49,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
             guard  let cell =  tableView.dequeueReusableCell(withIdentifier: CellIdentify.tempearture.rawValue) as? TemperatureCell else {
                 return UITableViewCell()
             }
+            cell.temperature = temperature
             return cell;
         }else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.chartCell.rawValue) as? ChartCell else {

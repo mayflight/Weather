@@ -9,7 +9,16 @@
 import UIKit
 
 class TemperatureCell: UITableViewCell {
-
+    
+    var temperature:Float? {
+        didSet {
+            guard let tem = temperature else {
+                return
+            }
+            temperatureView.updateContent(progress: tem/100.0, "气温:\(tem)")
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = UIColor.clear
@@ -18,6 +27,7 @@ class TemperatureCell: UITableViewCell {
     }
 
     
+    @IBOutlet weak var temperatureView: UIAnnularProgress!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

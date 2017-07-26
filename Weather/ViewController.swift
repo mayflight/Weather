@@ -16,20 +16,24 @@ class ViewController:UIViewController, Networkable{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"杭州"]) { json in
-            if json["status"].int != 200 {
+        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"杭州"]) {[weak self] json in
+            guard let result = WeatherResult.deserialize(from: json) else {
                 return
             }
-            guard let descript = json["data"]["ganmao"].string else{
+            
+            if result.status != 200 {
                 return
             }
-            guard let tem = json["data"]["wendu"].string else{
-                return
-            }
-            print("描述:\(descript),文档:\(tem)")
+            
+            self?.tableView.descript = result.data?.ganmao
+            self?.tableView.city = result.data?.city
+            self?.tableView.weather = result.data?.forecast?.first?.type
+            self?.tableView.date = result.data?.forecast?.first?.date
+            self?.tableView.temperature = result.data?.wendu
+            self?.tableView.reloadData()
         }
     }
     
-  
+   
     
 }

@@ -8,6 +8,25 @@
 
 import Foundation
 import UIKit
-struct DataCell {
-    let cell:UITableViewCell
+import HandyJSON
+struct WeatherDetails:HandyJSON {
+    var date:String?
+    var high:String?
+    var fengli:String?
+    var low:String?
+    var fengxiang:String?
+    var type:String?
+}
+
+struct WeatherAll:HandyJSON {
+    var city:String?
+    var forecast:[WeatherDetails]?
+    var ganmao:String?
+    var wendu:Float?
+}
+
+struct WeatherResult:HandyJSON {
+    var data:WeatherAll?
+    var status:Int?
+    var message:String?
 }
