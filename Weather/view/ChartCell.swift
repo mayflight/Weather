@@ -17,6 +17,12 @@ class ChartCell: UITableViewCell {
         self.selectionStyle = .none
     }
 
+    @IBOutlet weak var chartView: MultipleLinesChartView!
+    
+    func updateContent(_ hight:[Double]?,_ lower:[Double]?,_ dates:[String]?)  {
+        chartView .setLineData(hight,lower,dates)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

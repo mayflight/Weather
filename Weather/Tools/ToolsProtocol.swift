@@ -23,6 +23,51 @@ extension Sizeable where Self:UIView {
     }
 }
 
+extension String {
+    func getDouble() -> Double {
+        let result = self.characters.reduce("") {
+            guard Double(String($1)) != nil else{
+                return $0
+            }
+            return $0 + String($1)
+        }
+        guard let r = Double(result) else {
+            return 0
+        }
+        return r
+    }
+}
+
+extension Date {
+    func monthDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd"
+        return formatter.string(from: self)
+    }
+    func monthDay(next count:Int) -> [String] {
+        var dataes = [String]()
+        var index = 0
+        while index <  count{
+            dataes.append(Date(timeInterval: TimeInterval(3600*24*index), since: self).monthDay())
+            index += 1
+        }
+        return dataes
+    }
+}
+
+protocol Convertabel {
+    func stringConvertDouble(_ string : String?) -> Double
+}
+
+extension Convertabel {
+    func stringConvertDouble(_ string : String?) -> Double {
+        if string == nil {
+            return 0
+        }
+        return string!.getDouble()
+    }
+}
+
 protocol BezierPathAnimateable {
     func bezierAnimate(_ view:UIView,points fourpoints:[CGPoint])
 }

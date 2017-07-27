@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import HandyJSON
-struct WeatherDetails:HandyJSON {
+struct WeatherDetail:HandyJSON {
     var date:String?
     var high:String?
     var fengli:String?
@@ -20,7 +20,7 @@ struct WeatherDetails:HandyJSON {
 
 struct WeatherAll:HandyJSON {
     var city:String?
-    var forecast:[WeatherDetails]?
+    var forecast:[WeatherDetail]?
     var ganmao:String?
     var wendu:Float?
 }

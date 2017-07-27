@@ -31,20 +31,22 @@ class MultipleLinesChartView: LineChartView{
         self.xAxis.labelCount = 5
         self.xAxis.drawAxisLineEnabled = true
         self.xAxis.labelPosition = .bottom
-        setLineData([40,38,37,39,38], [30,29,27,28,26], ["7月24","7月25","7月26","7月27","7月28"])
     }
     
-    func setLineData(_ hight:[Double],_ lower:[Double],_ dates:[String]) {
+    func setLineData(_ hight:[Double]?,_ lower:[Double]?,_ dates:[String]?) {
+        if hight == nil || lower == nil || dates == nil {
+            return
+        }
         self.xAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
             
-            return "\(dates[(Int(index))])"
+            return "\(dates![(Int(index))])"
         })
         self.rightAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
             return "\(index)℃"
         })
         
-        let lineHigh = getLine(datas: hight, colors:append(UIColor.red, 5), text: "最高温度")
-        let lineLow = getLine(datas: lower, colors: append(UIColor.init(red: 38.0/255, green: 186.0/255, blue: 206.0/255, alpha: 1), 5), text: "最低温度")
+        let lineHigh = getLine(datas: hight!, colors:append(UIColor.red, 5), text: "最高温度")
+        let lineLow = getLine(datas: lower!, colors: append(UIColor.init(red: 38.0/255, green: 186.0/255, blue: 206.0/255, alpha: 1), 5), text: "最低温度")
         let data = LineChartData(dataSets: [lineHigh,lineLow])
         data.setValueFont(UIFont.systemFont(ofSize: 7))
         self.data = data

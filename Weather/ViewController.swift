@@ -16,6 +16,7 @@ class ViewController:UIViewController, Networkable{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"杭州"]) {[weak self] json in
             guard let result = WeatherResult.deserialize(from: json) else {
                 return
@@ -30,6 +31,7 @@ class ViewController:UIViewController, Networkable{
             self?.tableView.weather = result.data?.forecast?.first?.type
             self?.tableView.date = result.data?.forecast?.first?.date
             self?.tableView.temperature = result.data?.wendu
+            self?.tableView.weatherDetails = result.data?.forecast
             self?.tableView.reloadData()
         }
     }

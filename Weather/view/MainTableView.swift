@@ -8,13 +8,14 @@
 
 import UIKit
 
-class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
+class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Convertabel{
 
     var descript:String?
     var temperature:Float?
     var city:String?
     var weather:String?
     var date:String?
+    var weatherDetails:[WeatherDetail]?
     
     override func awakeFromNib() {
         self.delegate = self;
@@ -55,11 +56,20 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.chartCell.rawValue) as? ChartCell else {
                 return UITableViewCell()
             }
+            let hight = weatherDetails?.map() {
+                return stringConvertDouble($0.high)
+            }
+            let lower = weatherDetails?.map() {
+                return stringConvertDouble($0.low)
+            }
+            cell.updateContent(hight, lower, Date().monthDay(next: 5))
             return cell
         }else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.windCell.rawValue) as? WindCell else {
                 return UITableViewCell()
             }
+            cell.windPower.text = weatherDetails?.first?.fengli
+            cell.windDirection.text = weatherDetails?.first?.fengxiang
             return cell;
         }
         
@@ -89,5 +99,5 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate{
         return 1
     }
 
-   
+ 
 }

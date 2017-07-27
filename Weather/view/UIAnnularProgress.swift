@@ -89,12 +89,13 @@ class UIAnnularProgress: UIView {
         CATransaction.setDisableActions(!animate)
         CATransaction.setAnimationDuration(time)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-        progressLayer.strokeEnd = CGFloat(progress)
+        progressLayer.strokeEnd = progressProperty.progressEnd
         CATransaction.commit()
     }
     
     func updateContent(progress:Float,_ text:String?)  {
         progressProperty.text = text
+        progressProperty.progressEnd = CGFloat(progress)
         setNeedsDisplay()
         setProgress(progress: progress, time: 3, animate: true)
     }
