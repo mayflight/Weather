@@ -17,6 +17,25 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     var date:String?
     var weatherDetails:[WeatherDetail]?
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        let refresh = UIRefreshControl()
+        refresh.backgroundColor = UIColor.clear
+        refresh.tintAdjustmentMode = .automatic
+        refresh.tintColor = UIColor.white
+        refresh.addTarget(self, action:#selector(refreshAction), for: UIControlEvents.valueChanged)
+        self.addSubview(refresh)
+    }
+    
+    func refreshAction(refresh:UIRefreshControl) {
+        refresh.endRefreshing()
+        guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+            return
+        }
+        controller.refresh()
+    }
+    
     override func awakeFromNib() {
         self.delegate = self;
         self.dataSource = self;
