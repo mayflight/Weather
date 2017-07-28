@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Alamofire
+
 protocol Sizeable {
     var width:CGFloat {get}
     var height:CGFloat {get}
@@ -24,6 +24,9 @@ extension Sizeable where Self:UIView {
 }
 
 extension String {
+    /**
+     获取字符串里面包含的数字
+     */
     func getDouble() -> Double {
         let result = self.characters.reduce("") {
             guard Double(String($1)) != nil else{
@@ -38,12 +41,35 @@ extension String {
     }
 }
 
+protocol Convertabel {
+    func stringConvertDouble(_ string : String?) -> Double
+}
+
+extension Convertabel {
+    /**
+     将字符串转成数字
+     */
+    func stringConvertDouble(_ string : String?) -> Double {
+        if string == nil {
+            return 0
+        }
+        return string!.getDouble()
+    }
+}
+
+
 extension Date {
+    /**
+     将日期转成月/日 MM/dd
+     */
     func monthDay() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd"
         return formatter.string(from: self)
     }
+    /**
+     获取接下来n天的月/日 
+     */
     func monthDay(next count:Int) -> [String] {
         var dataes = [String]()
         var index = 0
@@ -55,55 +81,19 @@ extension Date {
     }
 }
 
-protocol Convertabel {
-    func stringConvertDouble(_ string : String?) -> Double
-}
-
-extension Convertabel {
-    func stringConvertDouble(_ string : String?) -> Double {
-        if string == nil {
-            return 0
+extension UIViewController {
+    func alert(_ message:String?,leftTitle:String = "取消",rightTitle:String, selectedAction:(()->())?)  {
+        let controller = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        let leftAction = UIAlertAction(title: leftTitle, style: .cancel, handler: nil)
+        
+        let rightAction = UIAlertAction(title: rightTitle, style: .default) { (action) in
+            if selectedAction != nil {
+                selectedAction!()
+            }
         }
-        return string!.getDouble()
-    }
-}
-
-protocol BezierPathAnimateable {
-    func bezierAnimate(_ view:UIView,points fourpoints:[CGPoint])
-}
-
-extension BezierPathAnimateable where Self : UIView{
-    func bezierAnimate(_ view:UIView,points fourpoints:[CGPoint]) {
-        guard fourpoints.count <= 4 else {
-            return
-        }
-        let bezierPath = UIBezierPath()
-        bezierPath.move(to:fourpoints[0])
-        bezierPath.addCurve(to: fourpoints[1], controlPoint1: fourpoints[2], controlPoint2:fourpoints[3])
-        let animate = CAKeyframeAnimation(keyPath: "position")
-        animate.path = bezierPath.cgPath
-        animate.duration = 5
-        animate.repeatCount = HUGE
-        animate.rotationMode = kCAAnimationRotateAuto
-        view.layer.add(animate, forKey: "Move")
-    }
-}
-
-protocol Networkable {
-    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (String?)->())
-}
-extension Networkable {
-    func getRequest(url:String,_ params:[String:String],_ callBack:@escaping (String?)->()) {        
-        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseString { (respones) in
-                if respones.result.isFailure {
-                    return
-                }
-            
-                guard let json = respones.result.value else{
-                    return
-                }
-                callBack(json)
-            
-        }
+        controller.addAction(leftAction)
+        controller.addAction(rightAction)
+        self.present(controller, animated: true, completion: nil)
+        
     }
 }

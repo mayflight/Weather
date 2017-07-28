@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; };
-		CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC589E5A1F27888800B85CCE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC589E611F278F2100B85CCE /* SwiftyJSON.swift */; };
 		CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6227EC1F2485B4007FC5FB /* ChartCell.swift */; };
 		CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6227F21F2486D8007FC5FB /* HeaderView.xib */; };
@@ -25,6 +23,14 @@
 		CCCC91601F210CA6003ACCA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */; };
 		CCCC916B1F210CA6003ACCA2 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC916A1F210CA6003ACCA2 /* WeatherTests.swift */; };
 		CCCC91761F210CA6003ACCA2 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */; };
+		E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */; };
+		E6196FD31F2ACE6800370667 /* NetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD21F2ACE6800370667 /* NetProtocol.swift */; };
+		E6196FD71F2ADCE200370667 /* AnimateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD51F2ADCE200370667 /* AnimateManager.swift */; };
+		E6196FD81F2ADCE200370667 /* TransitionAnimateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD61F2ADCE200370667 /* TransitionAnimateProtocol.swift */; };
+		E6196FDA1F2ADFD000370667 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD91F2ADFD000370667 /* LocationManager.swift */; };
+		E6196FEF1F2AEC7900370667 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; };
+		E6196FF11F2AEC8300370667 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6379E851F2B3525007F3BC1 /* RefreshManager.swift */; };
 		E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A08F1F26E65000633EC8 /* WindCell.swift */; };
 		E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A0911F26E67400633EC8 /* WindCell.xib */; };
 		E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */; };
@@ -180,9 +186,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E6196FF11F2AEC8300370667 /* Charts.framework in Embed Frameworks */,
 				E6B1A1561F274C7700633EC8 /* Alamofire.framework in Embed Frameworks */,
 				E6BD012A1F287CE4007BC048 /* HandyJSON.framework in Embed Frameworks */,
-				CC589E601F27891600B85CCE /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +196,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CC589E5A1F27888800B85CCE /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		CC589E611F278F2100B85CCE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CC6227EC1F2485B4007FC5FB /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		CC6227F21F2486D8007FC5FB /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -213,6 +218,13 @@
 		CCCC91711F210CA6003ACCA2 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		CCCC91771F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateProtocol.swift; sourceTree = "<group>"; };
+		E6196FD21F2ACE6800370667 /* NetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetProtocol.swift; sourceTree = "<group>"; };
+		E6196FD51F2ADCE200370667 /* AnimateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateManager.swift; sourceTree = "<group>"; };
+		E6196FD61F2ADCE200370667 /* TransitionAnimateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimateProtocol.swift; sourceTree = "<group>"; };
+		E6196FD91F2ADFD000370667 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E6196FEE1F2AEC7900370667 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
+		E6379E851F2B3525007F3BC1 /* RefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshManager.swift; sourceTree = "<group>"; };
 		E6B1A08F1F26E65000633EC8 /* WindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindCell.swift; sourceTree = "<group>"; };
 		E6B1A0911F26E67400633EC8 /* WindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindCell.xib; sourceTree = "<group>"; };
 		E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsProtocol.swift; sourceTree = "<group>"; };
@@ -228,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC589E5F1F27891600B85CCE /* Charts.framework in Frameworks */,
+				E6196FEF1F2AEC7900370667 /* Charts.framework in Frameworks */,
 				E6BD01291F287CE4007BC048 /* HandyJSON.framework in Frameworks */,
 				E6B1A1551F274C7700633EC8 /* Alamofire.framework in Frameworks */,
 			);
@@ -254,9 +266,10 @@
 		CC6227FB1F248FF1007FC5FB /* depends */ = {
 			isa = PBXGroup;
 			children = (
+				E6196FEE1F2AEC7900370667 /* Charts.framework */,
+				E6196FD41F2ADCE200370667 /* Transiton */,
 				E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */,
 				CC589E611F278F2100B85CCE /* SwiftyJSON.swift */,
-				CC589E5A1F27888800B85CCE /* Charts.framework */,
 				E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */,
 			);
 			path = depends;
@@ -327,10 +340,23 @@
 			path = WeatherUITests;
 			sourceTree = "<group>";
 		};
+		E6196FD41F2ADCE200370667 /* Transiton */ = {
+			isa = PBXGroup;
+			children = (
+				E6196FD51F2ADCE200370667 /* AnimateManager.swift */,
+				E6196FD61F2ADCE200370667 /* TransitionAnimateProtocol.swift */,
+			);
+			path = Transiton;
+			sourceTree = "<group>";
+		};
 		E6B1A0931F26F0C400633EC8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */,
+				E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */,
+				E6196FD21F2ACE6800370667 /* NetProtocol.swift */,
+				E6196FD91F2ADFD000370667 /* LocationManager.swift */,
+				E6379E851F2B3525007F3BC1 /* RefreshManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -655,12 +681,18 @@
 				E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */,
 				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
 				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
+				E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */,
 				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
+				E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */,
+				E6196FDA1F2ADFD000370667 /* LocationManager.swift in Sources */,
 				CCA40C191F223572002B1273 /* EnumModel.swift in Sources */,
+				E6196FD31F2ACE6800370667 /* NetProtocol.swift in Sources */,
 				E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */,
+				E6196FD71F2ADCE200370667 /* AnimateManager.swift in Sources */,
 				E6B1A0971F27346B00633EC8 /* StruceModel.swift in Sources */,
 				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
+				E6196FD81F2ADCE200370667 /* TransitionAnimateProtocol.swift in Sources */,
 				E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */,
 				CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */,
 				CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */,

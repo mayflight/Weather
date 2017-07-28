@@ -19,23 +19,14 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        let refresh = UIRefreshControl()
-        refresh.backgroundColor = UIColor.clear
-        refresh.tintAdjustmentMode = .automatic
-        refresh.tintColor = UIColor.white
-        refresh.addTarget(self, action:#selector(refreshAction), for: UIControlEvents.valueChanged)
-        self.addSubview(refresh)
-    }
-    
-    func refreshAction(refresh:UIRefreshControl) {
-        refresh.endRefreshing()
-        guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
-            return
+        RefreshManager.refresh(self) {
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+                return
+            }
+            controller.refresh()
         }
-        controller.refresh()
     }
-    
+        
     override func awakeFromNib() {
         self.delegate = self;
         self.dataSource = self;
@@ -45,7 +36,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     }
   
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 150
+        return 180
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -62,6 +53,12 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 2 {
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+                return
+            }
+            controller.transiton()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

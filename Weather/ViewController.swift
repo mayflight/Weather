@@ -9,18 +9,33 @@
 //http://www.sojson.com/open/api/weather/json.shtml?city=杭州
 
 import UIKit
-
+import CoreLocation
 class ViewController:UIViewController, Networkable{
 
     @IBOutlet weak var tableView: MainTableView!
     
+    let manager = LocationManager()
+    var city : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        refresh()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        manager.startLocation() { [weak self] in
+            guard let city = $1.locality else {
+                return
+            }
+            self?.city = city
+            self?.refresh()
+        }
     }
     
     func refresh()  {
-        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"杭州"]) {[weak self] json in
+        if city == nil {
+            return
+        }
+        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city!)"]) {[weak self] json in
             guard let result = WeatherResult.deserialize(from: json) else {
                 return
             }
@@ -37,7 +52,16 @@ class ViewController:UIViewController, Networkable{
             self?.tableView.weatherDetails = result.data?.forecast
             self?.tableView.reloadData()
         }
-
+    }
+    
+    func transiton()  {
+//        let controller = UIViewController()
+//        manager.animateType = .flip
+//        manager.time = 2
+//        manager.color = UIColor.brown
+//        controller.transitioningDelegate = manager
+//        
+//        self.present(controller, animated: true, completion: nil)
     }
 }
 
