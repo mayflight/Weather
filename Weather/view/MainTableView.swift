@@ -53,12 +53,11 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+        guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
                 return
-            }
-            controller.transiton()
         }
+        controller.transiton()
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,6 +85,14 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
             }
             cell.windPower.text = weatherDetails?.first?.fengli
             cell.windDirection.text = weatherDetails?.first?.fengxiang
+            var days = Date().monthDay(next: 5,"MM月dd日")
+            days.removeFirst()
+            
+            var weathers = weatherDetails?.map() {
+                return  $0.type
+            }
+            weathers?.removeFirst()
+            cell.updateContent(days, weathers)
             return cell;
         }
         

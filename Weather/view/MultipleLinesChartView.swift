@@ -63,6 +63,7 @@ class MultipleLinesChartView: LineChartView{
         line.lineDashLengths = [5,5]
         line.colors = colors
         line.setCircleColor(UIColor.green)
+        
         return line
     }
     

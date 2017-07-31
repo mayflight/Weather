@@ -62,19 +62,19 @@ extension Date {
     /**
      将日期转成月/日 MM/dd
      */
-    func monthDay() -> String {
+    func monthDay(_ format:String = "MM/dd") -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd"
+        formatter.dateFormat = format
         return formatter.string(from: self)
     }
     /**
      获取接下来n天的月/日 
      */
-    func monthDay(next count:Int) -> [String] {
+    func monthDay(next count:Int,_ format:String = "MM/dd") -> [String] {
         var dataes = [String]()
         var index = 0
         while index <  count{
-            dataes.append(Date(timeInterval: TimeInterval(3600*24*index), since: self).monthDay())
+            dataes.append(Date(timeInterval: TimeInterval(3600*24*index), since: self).monthDay(format))
             index += 1
         }
         return dataes

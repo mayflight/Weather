@@ -17,6 +17,14 @@ class WindCell: UITableViewCell,BezierPathAnimateable,Sizeable {
         self.selectionStyle = .none
     }
 
+    @IBOutlet weak var fourWeather: UILabel!
+    @IBOutlet weak var threeWeather: UILabel!
+    @IBOutlet weak var twoWeather: UILabel!
+    @IBOutlet weak var oneWeather: UILabel!
+    @IBOutlet weak var fourDay: UILabel!
+    @IBOutlet weak var twoDay: UILabel!
+    @IBOutlet weak var threeDay: UILabel!
+    @IBOutlet weak var oneDay: UILabel!
     @IBOutlet weak var windDirection: UILabel!
     @IBOutlet weak var windPower: UILabel!
     @IBOutlet weak var leafImageView: UIImageView!
@@ -27,9 +35,20 @@ class WindCell: UITableViewCell,BezierPathAnimateable,Sizeable {
         bezierAnimate(windDirection, points: [CGPoint(x:0,y:height/2),CGPoint(x:width,y:height),CGPoint(x:width/3,y:height/10),CGPoint(x:width/3*2,y:height)])
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
+    func updateContent(_ days:[String]?,_ weathers:[String?]?)  {
+        var daysLabels = [oneDay,twoDay,threeDay,fourDay]
+        var weatherLabels = [oneWeather,twoWeather,threeWeather,fourWeather]
+        _ =  days?.enumerated().map(){
+            if $0 < days!.count {
+                daysLabels[$0]?.text = $1
+            }
+        }
+        _ = weathers?.enumerated().map(){
+            if $0 < weathers!.count {
+                weatherLabels[$0]?.text = $1
+            }
+        }
+    
     }
     
 }

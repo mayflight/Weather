@@ -6,23 +6,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="windCell" id="iN0-l3-epB" customClass="WindCell" customModule="Weather" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="446" height="207"/>
+            <rect key="frame" x="0.0" y="0.0" width="446" height="205"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风力：微风" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syC-gj-mhl">
-                    <rect key="frame" x="5" y="10" width="87" height="20.5"/>
+                    <rect key="frame" x="5" y="5" width="87" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.8164601293" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sy2" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-zT-gB6">
-                    <rect key="frame" x="1" y="185" width="20" height="20"/>
+                    <rect key="frame" x="1" y="183" width="20" height="20"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="2dI-Tb-fYN"/>
@@ -35,23 +36,97 @@
                     <color key="textColor" red="0.25267582136480538" green="0.92728394269943237" blue="0.46630080407857766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-ub-a8H">
+                    <rect key="frame" x="0.0" y="102.5" width="446" height="80.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/31" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaw-p2-JhU">
+                            <rect key="frame" x="0.0" y="30" width="111.5" height="20.5"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.91549408440000002" green="0.65296299229999999" blue="0.36097321110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/31" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAy-Jb-iZB">
+                            <rect key="frame" x="111.5" y="30" width="111.5" height="20.5"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.91549408440000002" green="0.65296299229999999" blue="0.36097321110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/31" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-cO-GMb">
+                            <rect key="frame" x="223" y="30" width="111.5" height="20.5"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.91549408440000002" green="0.65296299229999999" blue="0.36097321110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7/31" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-af-NuD">
+                            <rect key="frame" x="334.5" y="30" width="111.5" height="20.5"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.91549408440000002" green="0.65296299229999999" blue="0.36097321110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q8E-dV-XiT">
+                    <rect key="frame" x="0.0" y="25.5" width="446" height="77"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阵雨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXT-b3-QFa">
+                            <rect key="frame" x="0.0" y="28" width="111.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.57155525684356689" green="0.36455130577087402" blue="0.7382015585899353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阵雨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTB-rj-qKQ">
+                            <rect key="frame" x="111.5" y="28" width="111.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.57155525684356689" green="0.36455130577087402" blue="0.7382015585899353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阵雨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMJ-Ix-vqR">
+                            <rect key="frame" x="223" y="28" width="111.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.57155525684356689" green="0.36455130577087402" blue="0.7382015585899353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阵雨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37i-2J-GdK">
+                            <rect key="frame" x="334.5" y="28" width="111.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.57155525684356689" green="0.36455130577087402" blue="0.7382015585899353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="W00-gH-EVu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6aG-TW-iei"/>
                 <constraint firstItem="W00-gH-EVu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="7Ox-xc-rUh"/>
-                <constraint firstItem="syC-gj-mhl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Eiy-e5-TPd"/>
+                <constraint firstItem="q8E-dV-XiT" firstAttribute="top" secondItem="syC-gj-mhl" secondAttribute="bottom" id="ECa-ee-faG"/>
                 <constraint firstItem="syC-gj-mhl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="MNW-7W-eao"/>
+                <constraint firstItem="q8E-dV-XiT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VG3-Jx-bCh"/>
+                <constraint firstItem="h8W-zT-gB6" firstAttribute="top" secondItem="cmQ-ub-a8H" secondAttribute="bottom" id="VWz-f2-g8w"/>
+                <constraint firstItem="q8E-dV-XiT" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZFK-yt-igU"/>
+                <constraint firstAttribute="trailing" secondItem="q8E-dV-XiT" secondAttribute="trailing" id="Zzu-vq-vMN"/>
+                <constraint firstItem="cmQ-ub-a8H" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fOq-d3-tRy"/>
                 <constraint firstAttribute="bottom" secondItem="h8W-zT-gB6" secondAttribute="bottom" constant="2" id="int-hd-bC6"/>
+                <constraint firstItem="syC-gj-mhl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="ok4-lN-2PD"/>
                 <constraint firstItem="h8W-zT-gB6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="pWe-6M-0z8"/>
+                <constraint firstAttribute="trailing" secondItem="cmQ-ub-a8H" secondAttribute="trailing" id="xG3-fu-NSZ"/>
+                <constraint firstItem="cmQ-ub-a8H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yWh-KH-oGd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="fourDay" destination="h6d-af-NuD" id="5Uk-gP-ukI"/>
+                <outlet property="fourWeather" destination="37i-2J-GdK" id="j5D-0e-vvm"/>
                 <outlet property="leafImageView" destination="h8W-zT-gB6" id="xCd-dQ-vdZ"/>
+                <outlet property="oneDay" destination="oaw-p2-JhU" id="o5J-bj-xwb"/>
+                <outlet property="oneWeather" destination="UXT-b3-QFa" id="FnF-v0-UoP"/>
+                <outlet property="threeDay" destination="gy5-cO-GMb" id="aro-TI-Tmx"/>
+                <outlet property="threeWeather" destination="SMJ-Ix-vqR" id="ccu-ys-oQJ"/>
+                <outlet property="twoDay" destination="pAy-Jb-iZB" id="5dZ-Cr-kNt"/>
+                <outlet property="twoWeather" destination="eTB-rj-qKQ" id="P6O-qI-sMA"/>
                 <outlet property="windDirection" destination="W00-gH-EVu" id="2A1-9K-q7P"/>
                 <outlet property="windPower" destination="syC-gj-mhl" id="JIy-8Q-wVH"/>
             </connections>
-            <point key="canvasLocation" x="69" y="-176.5"/>
+            <point key="canvasLocation" x="126" y="-482"/>
         </view>
     </objects>
     <resources>
