@@ -18,7 +18,6 @@
 		CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */; };
 		CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */; };
 		CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91571F210CA6003ACCA2 /* ViewController.swift */; };
-		CCCC915B1F210CA6003ACCA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC91591F210CA6003ACCA2 /* Main.storyboard */; };
 		CCCC915D1F210CA6003ACCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */; };
 		CCCC91601F210CA6003ACCA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */; };
 		CCCC916B1F210CA6003ACCA2 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC916A1F210CA6003ACCA2 /* WeatherTests.swift */; };
@@ -31,6 +30,12 @@
 		E6196FEF1F2AEC7900370667 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; };
 		E6196FF11F2AEC8300370667 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6379E851F2B3525007F3BC1 /* RefreshManager.swift */; };
+		E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */; };
+		E68E2ECD1F2F0FD900857CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */; };
+		E68E2ECF1F2F0FE700857CC4 /* Set.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */; };
+		E68E2ED11F2F102C00857CC4 /* GestureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */; };
+		E68E2ED31F2F1A7100857CC4 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ED21F2F1A7100857CC4 /* city.plist */; };
+		E68E2ED51F2F1D4E00857CC4 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */; };
 		E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A08F1F26E65000633EC8 /* WindCell.swift */; };
 		E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A0911F26E67400633EC8 /* WindCell.xib */; };
 		E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */; };
@@ -208,7 +213,6 @@
 		CCCC91521F210CA6003ACCA2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCCC91571F210CA6003ACCA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCCC915A1F210CA6003ACCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCCC915F1F210CA6003ACCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCCC91611F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,6 +229,12 @@
 		E6196FD91F2ADFD000370667 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E6196FEE1F2AEC7900370667 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		E6379E851F2B3525007F3BC1 /* RefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshManager.swift; sourceTree = "<group>"; };
+		E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		E68E2ECC1F2F0FD900857CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Set.storyboard; sourceTree = "<group>"; };
+		E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureProtocol.swift; sourceTree = "<group>"; };
+		E68E2ED21F2F1A7100857CC4 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
 		E6B1A08F1F26E65000633EC8 /* WindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindCell.swift; sourceTree = "<group>"; };
 		E6B1A0911F26E67400633EC8 /* WindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindCell.xib; sourceTree = "<group>"; };
 		E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsProtocol.swift; sourceTree = "<group>"; };
@@ -309,15 +319,18 @@
 			children = (
 				CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */,
 				CCCC91571F210CA6003ACCA2 /* ViewController.swift */,
+				E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */,
 				E6B1A0931F26F0C400633EC8 /* Tools */,
 				CC6227FB1F248FF1007FC5FB /* depends */,
 				CCA40C171F223572002B1273 /* Model */,
 				E6E6317F1F219B9A005FAD1D /* view */,
 				E6E6317E1F219929005FAD1D /* nib */,
-				CCCC91591F210CA6003ACCA2 /* Main.storyboard */,
 				CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */,
+				E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */,
+				E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */,
 				CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */,
 				CCCC91611F210CA6003ACCA2 /* Info.plist */,
+				E68E2ED21F2F1A7100857CC4 /* city.plist */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -352,6 +365,7 @@
 		E6B1A0931F26F0C400633EC8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */,
 				E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */,
 				E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */,
 				E6196FD21F2ACE6800370667 /* NetProtocol.swift */,
@@ -411,6 +425,7 @@
 				E6B1A08F1F26E65000633EC8 /* WindCell.swift */,
 				CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */,
 				CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */,
+				E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -646,13 +661,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68E2ECD1F2F0FD900857CC4 /* Main.storyboard in Resources */,
+				E68E2ECF1F2F0FE700857CC4 /* Set.storyboard in Resources */,
 				CCCC91601F210CA6003ACCA2 /* LaunchScreen.storyboard in Resources */,
+				E68E2ED31F2F1A7100857CC4 /* city.plist in Resources */,
 				CCCC915D1F210CA6003ACCA2 /* Assets.xcassets in Resources */,
 				CCA40C111F2232A6002B1273 /* TemperatureCell.xib in Resources */,
 				CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */,
 				CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */,
 				E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */,
-				CCCC915B1F210CA6003ACCA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */,
+				E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */,
 				E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */,
 				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
 				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
@@ -685,6 +703,7 @@
 				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
 				E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */,
 				E6196FDA1F2ADFD000370667 /* LocationManager.swift in Sources */,
+				E68E2ED51F2F1D4E00857CC4 /* CityPickerView.swift in Sources */,
 				CCA40C191F223572002B1273 /* EnumModel.swift in Sources */,
 				E6196FD31F2ACE6800370667 /* NetProtocol.swift in Sources */,
 				E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */,
@@ -693,6 +712,7 @@
 				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
 				E6196FD81F2ADCE200370667 /* TransitionAnimateProtocol.swift in Sources */,
+				E68E2ED11F2F102C00857CC4 /* GestureProtocol.swift in Sources */,
 				E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */,
 				CC589E621F278F2100B85CCE /* SwiftyJSON.swift in Sources */,
 				CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */,
@@ -741,20 +761,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CCCC91591F210CA6003ACCA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCCC915A1F210CA6003ACCA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CCCC915F1F210CA6003ACCA2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E68E2ECC1F2F0FD900857CC4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

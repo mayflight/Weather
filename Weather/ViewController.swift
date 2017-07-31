@@ -15,13 +15,17 @@ class ViewController:UIViewController, Networkable{
     @IBOutlet weak var tableView: MainTableView!
     
     let manager = LocationManager()
+    let animateManager = AnimateManager()
     var city : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
+        if city != nil {
+            return
+        }
         manager.startLocation() { [weak self] in
             guard let city = $1.locality else {
                 return
@@ -55,13 +59,17 @@ class ViewController:UIViewController, Networkable{
     }
     
     func transiton()  {
-//        let controller = UIViewController()
-//        manager.animateType = .flip
-//        manager.time = 2
-//        manager.color = UIColor.brown
-//        controller.transitioningDelegate = manager
-//        
-//        self.present(controller, animated: true, completion: nil)
+        guard  let controller = UIStoryboard(name: "Set", bundle: nil).instantiateInitialViewController() else {
+            return
+        }
+        animateManager.animateType = .flip
+        animateManager.color = UIColor(colorLiteralRed: 219/255.0, green: 255/255.0, blue: 213/255.0, alpha: 1)
+        controller.transitioningDelegate = animateManager
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("删除")
     }
 }
 
