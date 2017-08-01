@@ -36,6 +36,7 @@
 		E68E2ED11F2F102C00857CC4 /* GestureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */; };
 		E68E2ED31F2F1A7100857CC4 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ED21F2F1A7100857CC4 /* city.plist */; };
 		E68E2ED51F2F1D4E00857CC4 /* CityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */; };
+		E694267D1F3085EB00CA325A /* noti.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E694267C1F3085EB00CA325A /* noti.m4a */; };
 		E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A08F1F26E65000633EC8 /* WindCell.swift */; };
 		E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B1A0911F26E67400633EC8 /* WindCell.xib */; };
 		E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */; };
@@ -235,6 +236,7 @@
 		E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureProtocol.swift; sourceTree = "<group>"; };
 		E68E2ED21F2F1A7100857CC4 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPickerView.swift; sourceTree = "<group>"; };
+		E694267C1F3085EB00CA325A /* noti.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = noti.m4a; sourceTree = "<group>"; };
 		E6B1A08F1F26E65000633EC8 /* WindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindCell.swift; sourceTree = "<group>"; };
 		E6B1A0911F26E67400633EC8 /* WindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindCell.xib; sourceTree = "<group>"; };
 		E6B1A0941F26F0EE00633EC8 /* ToolsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsProtocol.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */,
 				E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */,
 				CCCC915E1F210CA6003ACCA2 /* LaunchScreen.storyboard */,
+				E694267C1F3085EB00CA325A /* noti.m4a */,
 				CCCC91611F210CA6003ACCA2 /* Info.plist */,
 				E68E2ED21F2F1A7100857CC4 /* city.plist */,
 			);
@@ -670,6 +673,7 @@
 				CC6227F31F2486D8007FC5FB /* HeaderView.xib in Resources */,
 				CC6227F71F24872C007FC5FB /* ChartCell.xib in Resources */,
 				E6B1A0921F26E67400633EC8 /* WindCell.xib in Resources */,
+				E694267D1F3085EB00CA325A /* noti.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

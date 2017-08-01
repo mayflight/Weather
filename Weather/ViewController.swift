@@ -37,7 +37,7 @@ class ViewController:UIViewController,Networkable,Saveabel{
         localNotifiction.alertBody = "本地推送消息"
         localNotifiction.alertTitle = "本地推送测试"
         localNotifiction.applicationIconBadgeNumber = 1
-        localNotifiction.soundName = UILocalNotificationDefaultSoundName
+        localNotifiction.soundName = "noti.m4a"
         //添加推送
         UIApplication.shared.scheduleLocalNotification(localNotifiction)
     }
