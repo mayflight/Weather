@@ -9,15 +9,33 @@
 import UIKit
 
 class SetViewController: UIViewController,GestureProtocol{
-
+   
+    @IBOutlet weak var cityPicker: CityPickerView!
+    
+    @IBOutlet weak var selectedCity: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSwipeGesture(self, action: #selector(swipe), view: self.view)
+        cityPicker.selectedAction = {[weak self] (text:String?,row1:Int,row2:Int) ->() in
+            if text != nil {
+                self?.selectedCity.text = "选择城市:\(text!)"
+            }
+        }
+        
     }
-
     
     func swipe() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true){[weak self] in
+            guard  let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+                return
+            }
+            guard let city = self?.cityPicker.selectedCity else {
+                return
+            }
+            controller.refresh(city)
+        }
     }
     
     override func didReceiveMemoryWarning() {

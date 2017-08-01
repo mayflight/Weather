@@ -23,10 +23,13 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
             guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
                 return
             }
-            controller.refresh()
+            guard let city = controller.getOnDisk(ViewController.citykey) else {
+                controller.refresh()
+                return
+            }
+            controller.refresh(city)
         }
     }
-        
     override func awakeFromNib() {
         self.delegate = self;
         self.dataSource = self;
@@ -57,7 +60,6 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
                 return
         }
         controller.transiton()
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

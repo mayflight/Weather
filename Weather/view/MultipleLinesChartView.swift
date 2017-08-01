@@ -16,7 +16,6 @@ class MultipleLinesChartView: LineChartView{
         self.leftAxis.enabled = false
         self.rightAxis.drawAxisLineEnabled = false
         self.rightAxis.drawGridLinesEnabled = false
-        self.xAxis.drawAxisLineEnabled = false
         self.xAxis.drawGridLinesEnabled = false
         self.drawGridBackgroundEnabled = false
         self.drawBordersEnabled = false
@@ -24,13 +23,14 @@ class MultipleLinesChartView: LineChartView{
         self.setScaleEnabled(false)
         self.pinchZoomEnabled = false
         self.legend.horizontalAlignment = .right
-        self.legend.verticalAlignment = .top
-        self.legend.orientation = .vertical
+        self.legend.verticalAlignment = .bottom
+        self.legend.orientation = .horizontal
         self.legend.drawInside = false
         self.xAxis.granularity = 1
         self.xAxis.labelCount = 5
         self.xAxis.drawAxisLineEnabled = true
         self.xAxis.labelPosition = .bottom
+        self.xAxis.avoidFirstLastClippingEnabled = true
     }
     
     func setLineData(_ hight:[Double]?,_ lower:[Double]?,_ dates:[String]?) {
@@ -38,17 +38,16 @@ class MultipleLinesChartView: LineChartView{
             return
         }
         self.xAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
-            
             return "\(dates![(Int(index))])"
         })
         self.rightAxis.valueFormatter = DefaultAxisValueFormatter(block: { (index, _) -> String in
             return "\(index)℃"
         })
-        
+ 
         let lineHigh = getLine(datas: hight!, colors:append(UIColor.red, 5), text: "最高温度")
         let lineLow = getLine(datas: lower!, colors: append(UIColor.init(red: 38.0/255, green: 186.0/255, blue: 206.0/255, alpha: 1), 5), text: "最低温度")
         let data = LineChartData(dataSets: [lineHigh,lineLow])
-        data.setValueFont(UIFont.systemFont(ofSize: 7))
+        data.setValueFont(UIFont.systemFont(ofSize: 10))
         self.data = data
     }
     
@@ -63,7 +62,7 @@ class MultipleLinesChartView: LineChartView{
         line.lineDashLengths = [5,5]
         line.colors = colors
         line.setCircleColor(UIColor.green)
-        
+        line.mode = .horizontalBezier
         return line
     }
     

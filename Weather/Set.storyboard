@@ -44,6 +44,10 @@
                             <constraint firstItem="GHu-K3-oSS" firstAttribute="leading" secondItem="kAA-Yr-152" secondAttribute="leading" id="vWJ-PL-SRZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityPicker" destination="GHu-K3-oSS" id="UEF-fv-xGZ"/>
+                        <outlet property="selectedCity" destination="DD8-Va-xhq" id="go1-1y-KbC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcP-la-Jup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

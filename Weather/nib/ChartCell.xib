@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJc-6r-brg" customClass="MultipleLinesChartView" customModule="Weather" customModuleProvider="target">
-                    <rect key="frame" x="10" y="0.0" width="428" height="180"/>
+                    <rect key="frame" x="0.0" y="0.0" width="438" height="180"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
@@ -24,7 +24,7 @@
             <constraints>
                 <constraint firstItem="qJc-6r-brg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7qf-pv-L5f"/>
                 <constraint firstAttribute="trailing" secondItem="qJc-6r-brg" secondAttribute="trailing" id="GLR-et-mlm"/>
-                <constraint firstItem="qJc-6r-brg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ZPC-CD-0uC"/>
+                <constraint firstItem="qJc-6r-brg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZPC-CD-0uC"/>
                 <constraint firstAttribute="bottom" secondItem="qJc-6r-brg" secondAttribute="bottom" id="e88-w8-JL1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

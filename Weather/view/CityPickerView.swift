@@ -12,6 +12,9 @@ class CityPickerView: UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource{
 
     var citys : Array<Dictionary<String, Any>>?
     var selectedRow = 0
+    var selectedCity:String?
+    var selectedAction:((_ text:String?,_ row1:Int,_ row2:Int) -> ())?
+    let manager = LocationManager()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -72,9 +75,39 @@ class CityPickerView: UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource{
             selectedRow = row
             pickerView.selectRow(0, inComponent: 1, animated: true)
             pickerView.reloadComponent(1)
+            return
         }
         
+        if component != 1 {
+            return
+        }
+        
+        guard let cityDictory = citys?[selectedRow],let cityArray = cityDictory["cities"] as? [String] else {
+            return
+        }
+        
+        selectedCity = cityArray[row]
+        let row1 = pickerView.selectedRow(inComponent: 0)
+        let row2 = pickerView.selectedRow(inComponent: 1)
+        
+        if self.selectedAction != nil{
+            self.selectedAction!(selectedCity,row1,row2)
+        }
+        
+        if row1 == 0 && row2 == 0 {
+            guard let controller = self.getController() else {
+                return
+            }
+            manager.startLocation(controller) { [weak self] in
+                guard let city = $1.locality else {
+                    return
+                }
+                self?.selectedCity = city
+                if self?.selectedAction != nil {
+                    self?.selectedAction!(self?.selectedCity,row1,row2)
+                }
+            }
+        }
     }
-    
     
 }

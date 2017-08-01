@@ -10,36 +10,40 @@
 
 import UIKit
 import CoreLocation
-class ViewController:UIViewController, Networkable{
-
+class ViewController:UIViewController,Networkable,Saveabel{
+    
+    static let citykey = "selectedcity"
+    
     @IBOutlet weak var tableView: MainTableView!
     
-    let manager = LocationManager()
     let animateManager = AnimateManager()
-    var city : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let city = getOnDisk(ViewController.citykey) else {
+            refresh()
+            return
+        }
+        refresh(city)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if city != nil {
-            return
-        }
-        manager.startLocation() { [weak self] in
-            guard let city = $1.locality else {
-                return
-            }
-            self?.city = city
-            self?.refresh()
-        }
+        let localNotifiction = UILocalNotification()
+        //推送时间30s后
+        localNotifiction.fireDate = Date(timeIntervalSinceNow: 10)
+        //时区(本地)
+        localNotifiction.timeZone = NSTimeZone.system
+        //推送消息
+        localNotifiction.alertBody = "本地推送消息"
+        localNotifiction.alertTitle = "本地推送测试"
+        localNotifiction.applicationIconBadgeNumber = 1
+        localNotifiction.soundName = UILocalNotificationDefaultSoundName
+        //添加推送
+        UIApplication.shared.scheduleLocalNotification(localNotifiction)
     }
     
-    func refresh()  {
-        if city == nil {
-            return
-        }
-        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city!)"]) {[weak self] json in
+    func refresh(_ city:String = "北京")  {
+        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city)"]) {[weak self] json in
             guard let result = WeatherResult.deserialize(from: json) else {
                 return
             }
@@ -47,7 +51,7 @@ class ViewController:UIViewController, Networkable{
             if result.status != 200 {
                 return
             }
-            
+            self?.saveOnDisk(ViewController.citykey, city)
             self?.tableView.descript = result.data?.ganmao
             self?.tableView.city = result.data?.city
             self?.tableView.weather = result.data?.forecast?.first?.type
@@ -67,10 +71,7 @@ class ViewController:UIViewController, Networkable{
         controller.transitioningDelegate = animateManager
         self.present(controller, animated: true, completion: nil)
     }
-    
-    deinit {
-        print("删除")
-    }
+
 }
 
 

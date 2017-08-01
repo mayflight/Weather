@@ -23,6 +23,22 @@ extension Sizeable where Self:UIView {
     }
 }
 
+protocol Saveabel {
+    func saveOnDisk(_ key:String,_ value:String)
+    func getOnDisk(_ key:String) -> String?
+}
+
+extension Saveabel {
+    func saveOnDisk(_ key:String,_ value:String) {
+        UserDefaults.standard.setValue(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getOnDisk(_ key:String) -> String?{
+        return UserDefaults.standard.string(forKey: key)
+    }
+}
+
 extension String {
     /**
      获取字符串里面包含的数字
@@ -39,6 +55,7 @@ extension String {
         }
         return r
     }
+    
 }
 
 protocol Convertabel {
@@ -56,7 +73,6 @@ extension Convertabel {
         return string!.getDouble()
     }
 }
-
 
 extension Date {
     /**
@@ -95,5 +111,23 @@ extension UIViewController {
         controller.addAction(rightAction)
         self.present(controller, animated: true, completion: nil)
         
+    }
+}
+
+extension UIView {
+    func getController() -> UIViewController? {
+        guard var responder = self.next else {
+            return nil
+        }
+        
+        repeat {
+            if responder is UIViewController {
+                return responder as? UIViewController
+            }
+            guard  let r = responder.next else {
+                return nil
+            }
+            responder = r
+        }while true
     }
 }

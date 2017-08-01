@@ -20,12 +20,12 @@ class LocationManager : NSObject, CLLocationManagerDelegate{
     let manager = CLLocationManager()
     private var result:LocationResult? = nil
     
-    func startLocation(accuracy:CLLocationAccuracy = kCLLocationAccuracyKilometer, distance:CLLocationDistance = 1000, _ result:@escaping LocationResult) {
+    func startLocation(accuracy:CLLocationAccuracy = kCLLocationAccuracyKilometer, distance:CLLocationDistance = 1000,_ controller:UIViewController, _ result:@escaping LocationResult) {
         manager.delegate = self
         manager.desiredAccuracy = accuracy
         manager.distanceFilter = distance
         if CLLocationManager.authorizationStatus() == .denied {
-            requestLocationAuthor()
+            requestLocationAuthor(controller)
         }
         if #available(iOS 8.0, *) {
             manager.requestWhenInUseAuthorization()
@@ -51,15 +51,16 @@ class LocationManager : NSObject, CLLocationManagerDelegate{
         }
     }
 
-    func requestLocationAuthor() {
-        guard let controller = UIApplication.shared.keyWindow?.rootViewController else {
-            return
-        }
+    func requestLocationAuthor(_ controller:UIViewController) {
         controller.alert("前往设置页面开启应用定位权限", rightTitle: "设置") {
             guard let url = URL(string: UIApplicationOpenSettingsURLString) else {
                 return
             }
-            UIApplication.shared.open(url, options:[:], completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options:[:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }
 
     }
