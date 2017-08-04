@@ -211,15 +211,15 @@
 		CCA40C101F2232A6002B1273 /* TemperatureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureCell.xib; sourceTree = "<group>"; };
 		CCA40C181F223572002B1273 /* EnumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumModel.swift; sourceTree = "<group>"; };
 		CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnnularProgress.swift; sourceTree = "<group>"; };
-		CCCC91521F210CA6003ACCA2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCC91521F210CA6003ACCA2 /* WeatherLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCCC91571F210CA6003ACCA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCCC91611F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCCC91661F210CA6003ACCA2 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCC91661F210CA6003ACCA2 /* WeatherLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC916A1F210CA6003ACCA2 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		CCCC916C1F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCCC91711F210CA6003ACCA2 /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCC91711F210CA6003ACCA2 /* WeatherLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		CCCC91771F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateProtocol.swift; sourceTree = "<group>"; };
@@ -309,9 +309,9 @@
 		CCCC91531F210CA6003ACCA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCCC91521F210CA6003ACCA2 /* Weather.app */,
-				CCCC91661F210CA6003ACCA2 /* WeatherTests.xctest */,
-				CCCC91711F210CA6003ACCA2 /* WeatherUITests.xctest */,
+				CCCC91521F210CA6003ACCA2 /* WeatherLife.app */,
+				CCCC91661F210CA6003ACCA2 /* WeatherLifeTests.xctest */,
+				CCCC91711F210CA6003ACCA2 /* WeatherLifeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,9 +436,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCCC91511F210CA6003ACCA2 /* Weather */ = {
+		CCCC91511F210CA6003ACCA2 /* WeatherLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCCC917A1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "Weather" */;
+			buildConfigurationList = CCCC917A1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLife" */;
 			buildPhases = (
 				CCCC914E1F210CA6003ACCA2 /* Sources */,
 				CCCC914F1F210CA6003ACCA2 /* Frameworks */,
@@ -451,14 +451,14 @@
 				E6B1A1581F274C7700633EC8 /* PBXTargetDependency */,
 				E6BD012C1F287CE4007BC048 /* PBXTargetDependency */,
 			);
-			name = Weather;
+			name = WeatherLife;
 			productName = Weather;
-			productReference = CCCC91521F210CA6003ACCA2 /* Weather.app */;
+			productReference = CCCC91521F210CA6003ACCA2 /* WeatherLife.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CCCC91651F210CA6003ACCA2 /* WeatherTests */ = {
+		CCCC91651F210CA6003ACCA2 /* WeatherLifeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCCC917D1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherTests" */;
+			buildConfigurationList = CCCC917D1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLifeTests" */;
 			buildPhases = (
 				CCCC91621F210CA6003ACCA2 /* Sources */,
 				CCCC91631F210CA6003ACCA2 /* Frameworks */,
@@ -469,14 +469,14 @@
 			dependencies = (
 				CCCC91681F210CA6003ACCA2 /* PBXTargetDependency */,
 			);
-			name = WeatherTests;
+			name = WeatherLifeTests;
 			productName = WeatherTests;
-			productReference = CCCC91661F210CA6003ACCA2 /* WeatherTests.xctest */;
+			productReference = CCCC91661F210CA6003ACCA2 /* WeatherLifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CCCC91701F210CA6003ACCA2 /* WeatherUITests */ = {
+		CCCC91701F210CA6003ACCA2 /* WeatherLifeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCCC91801F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherUITests" */;
+			buildConfigurationList = CCCC91801F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLifeUITests" */;
 			buildPhases = (
 				CCCC916D1F210CA6003ACCA2 /* Sources */,
 				CCCC916E1F210CA6003ACCA2 /* Frameworks */,
@@ -487,9 +487,9 @@
 			dependencies = (
 				CCCC91731F210CA6003ACCA2 /* PBXTargetDependency */,
 			);
-			name = WeatherUITests;
+			name = WeatherLifeUITests;
 			productName = WeatherUITests;
-			productReference = CCCC91711F210CA6003ACCA2 /* WeatherUITests.xctest */;
+			productReference = CCCC91711F210CA6003ACCA2 /* WeatherLifeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -521,7 +521,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCCC914D1F210CA6003ACCA2 /* Build configuration list for PBXProject "Weather" */;
+			buildConfigurationList = CCCC914D1F210CA6003ACCA2 /* Build configuration list for PBXProject "WeatherLife" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -544,9 +544,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				CCCC91511F210CA6003ACCA2 /* Weather */,
-				CCCC91651F210CA6003ACCA2 /* WeatherTests */,
-				CCCC91701F210CA6003ACCA2 /* WeatherUITests */,
+				CCCC91511F210CA6003ACCA2 /* WeatherLife */,
+				CCCC91651F210CA6003ACCA2 /* WeatherLifeTests */,
+				CCCC91701F210CA6003ACCA2 /* WeatherLifeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -744,12 +744,12 @@
 /* Begin PBXTargetDependency section */
 		CCCC91681F210CA6003ACCA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCCC91511F210CA6003ACCA2 /* Weather */;
+			target = CCCC91511F210CA6003ACCA2 /* WeatherLife */;
 			targetProxy = CCCC91671F210CA6003ACCA2 /* PBXContainerItemProxy */;
 		};
 		CCCC91731F210CA6003ACCA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCCC91511F210CA6003ACCA2 /* Weather */;
+			target = CCCC91511F210CA6003ACCA2 /* WeatherLife */;
 			targetProxy = CCCC91721F210CA6003ACCA2 /* PBXContainerItemProxy */;
 		};
 		E6B1A1581F274C7700633EC8 /* PBXTargetDependency */ = {
@@ -876,7 +876,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8ZX32FES47;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Weather/depends",
@@ -884,8 +886,9 @@
 				INFOPLIST_FILE = Weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fanwei.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yadong.weatherlife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -896,7 +899,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8ZX32FES47;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Weather/depends",
@@ -904,8 +909,9 @@
 				INFOPLIST_FILE = Weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fanwei.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yadong.weatherlife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -922,7 +928,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yadong.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherLife.app/WeatherLife";
 			};
 			name = Debug;
 		};
@@ -937,7 +943,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yadong.WeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherLife.app/WeatherLife";
 			};
 			name = Release;
 		};
@@ -972,7 +978,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCCC914D1F210CA6003ACCA2 /* Build configuration list for PBXProject "Weather" */ = {
+		CCCC914D1F210CA6003ACCA2 /* Build configuration list for PBXProject "WeatherLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCC91781F210CA6003ACCA2 /* Debug */,
@@ -981,7 +987,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCC917A1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "Weather" */ = {
+		CCCC917A1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCC917B1F210CA6003ACCA2 /* Debug */,
@@ -990,7 +996,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCC917D1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
+		CCCC917D1F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLifeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCC917E1F210CA6003ACCA2 /* Debug */,
@@ -999,7 +1005,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCC91801F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherUITests" */ = {
+		CCCC91801F210CA6003ACCA2 /* Build configuration list for PBXNativeTarget "WeatherLifeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCC91811F210CA6003ACCA2 /* Debug */,
