@@ -95,6 +95,35 @@ extension Date {
         }
         return dataes
     }
+    
+    func getDateBy(_ h:Int,_ m:Int,_ s:Int) -> Date? {
+        let targetTime = h*60*60+m*60+s
+        if targetTime > 24*60*60 {
+            return nil
+        }
+        let currentdate = self.monthDay("HH,mm,ss").components(separatedBy: ",").map(){
+            return Int($0)
+        }
+        let currentTime = currentdate.enumerated().reduce(0) {
+            var result = $0
+            if $1.element == nil {
+                return result
+            }
+            if $1.offset == 0 {
+                result += $1.element!*60*60
+            }else if $1.offset == 1 {
+                result += $1.element!*60
+            }else if $1.offset == 2 {
+                result += $1.element!
+            }
+            return result
+        }
+        if targetTime >= currentTime {
+            return Date(timeInterval: TimeInterval(targetTime-currentTime), since: self)
+        }else {
+            return Date(timeInterval: TimeInterval(targetTime+24*60*60-currentTime), since: self)
+        }
+    }
 }
 
 extension UIViewController {

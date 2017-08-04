@@ -10,7 +10,7 @@
 
 import UIKit
 import CoreLocation
-class ViewController:UIViewController,Networkable,Saveabel{
+class ViewController:UIViewController,Networkable,Saveabel,LocalNotificationabel{
     
     static let citykey = "selectedcity"
     
@@ -25,23 +25,14 @@ class ViewController:UIViewController,Networkable,Saveabel{
             return
         }
         refresh(city)
+        
+        guard let date = Date().getDateBy(7,20, 0) else {
+            return
+        }
+        sendNotification(title: "天气播报", body: "关注天气，健康生活。", time: date)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        let localNotifiction = UILocalNotification()
-//        //推送时间30s后
-//        localNotifiction.fireDate = Date(timeIntervalSinceNow: 10)
-//        //时区(本地)
-//        localNotifiction.timeZone = NSTimeZone.system
-//        //推送消息
-//        localNotifiction.alertBody = "本地推送消息"
-//        localNotifiction.alertTitle = "本地推送测试"
-//        localNotifiction.applicationIconBadgeNumber = 1
-//        localNotifiction.soundName = "noti.m4a"
-//        //添加推送
-//        UIApplication.shared.scheduleLocalNotification(localNotifiction)
-//    }
-    
+
     func refresh(_ city:String = "北京")  {
         getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city)"]) {[weak self] json in
             guard let result = WeatherResult.deserialize(from: json) else {

@@ -45,6 +45,7 @@
 		E6B1A1561F274C7700633EC8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6B1A1481F274B9000633EC8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6BD01291F287CE4007BC048 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BD011A1F287C70007BC048 /* HandyJSON.framework */; };
 		E6BD012A1F287CE4007BC048 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6BD011A1F287C70007BC048 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6DF7B021F345CD7000C35FA /* LocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF7B011F345CD7000C35FA /* LocalNotificationProtocol.swift */; };
 		E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E631801F219B9A005FAD1D /* HeaderView.swift */; };
 		E6E633A31F2200AF005FAD1D /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E633A21F2200AF005FAD1D /* MainTableView.swift */; };
 /* End PBXBuildFile section */
@@ -243,6 +244,7 @@
 		E6B1A0961F27346B00633EC8 /* StruceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StruceModel.swift; sourceTree = "<group>"; };
 		E6B1A13C1F274B9000633EC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E6BD01071F287C6F007BC048 /* HandyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HandyJSON.xcodeproj; path = HandyJSON/HandyJSON.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E6DF7B011F345CD7000C35FA /* LocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		E6E631801F219B9A005FAD1D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E6E633A21F2200AF005FAD1D /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -374,6 +376,7 @@
 				E6196FD21F2ACE6800370667 /* NetProtocol.swift */,
 				E6196FD91F2ADFD000370667 /* LocationManager.swift */,
 				E6379E851F2B3525007F3BC1 /* RefreshManager.swift */,
+				E6DF7B011F345CD7000C35FA /* LocalNotificationProtocol.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DF7B021F345CD7000C35FA /* LocalNotificationProtocol.swift in Sources */,
 				CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */,
 				E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */,
 				E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */,
