@@ -29,6 +29,7 @@
 		E6196FEF1F2AEC7900370667 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; };
 		E6196FF11F2AEC8300370667 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6196FEE1F2AEC7900370667 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6379E851F2B3525007F3BC1 /* RefreshManager.swift */; };
+		E667324A1F38456400519586 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66732491F38456400519586 /* TimePickerView.swift */; };
 		E67CEADC1F33100E00B021B0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67CEADB1F33100E00B021B0 /* Launch Screen.storyboard */; };
 		E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */; };
 		E68E2ECD1F2F0FD900857CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */; };
@@ -230,6 +231,8 @@
 		E6196FD91F2ADFD000370667 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E6196FEE1F2AEC7900370667 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		E6379E851F2B3525007F3BC1 /* RefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshManager.swift; sourceTree = "<group>"; };
+		E66732491F38456400519586 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		E667325A1F38487500519586 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E67CEADB1F33100E00B021B0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		E68E2ECC1F2F0FD900857CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 				CCCC91691F210CA6003ACCA2 /* WeatherTests */,
 				CCCC91741F210CA6003ACCA2 /* WeatherUITests */,
 				CCCC91531F210CA6003ACCA2 /* Products */,
+				E66732591F38487500519586 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -365,6 +369,14 @@
 				E6196FD61F2ADCE200370667 /* TransitionAnimateProtocol.swift */,
 			);
 			path = Transiton;
+			sourceTree = "<group>";
+		};
+		E66732591F38487500519586 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E667325A1F38487500519586 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E6B1A0931F26F0C400633EC8 /* Tools */ = {
@@ -432,6 +444,7 @@
 				CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */,
 				CC6228131F249954007FC5FB /* MultipleLinesChartView.swift */,
 				E68E2ED41F2F1D4E00857CC4 /* CityPickerView.swift */,
+				E66732491F38456400519586 /* TimePickerView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -708,6 +721,7 @@
 				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
 				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
 				E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */,
+				E667324A1F38456400519586 /* TimePickerView.swift in Sources */,
 				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
 				E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */,
 				E6196FDA1F2ADFD000370667 /* LocationManager.swift in Sources */,

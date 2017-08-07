@@ -48,8 +48,14 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
         }
         headerView.suggestLabel.text = descript
         headerView.cityLabel.text = city
-        headerView.dateTimeLabel.text = date
         headerView.weatherLabel.text = weather
+        
+        let array =  date?.components(separatedBy: ",")
+        let first = array?.first
+        let last = array?.last
+        if first != nil && last != nil{
+            headerView.dateTimeLabel.text =  first!.convertDateFormater(new:"MM/dd") + last!
+        }
         
         return headerView
     }
@@ -85,8 +91,8 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentify.windCell.rawValue) as? WindCell else {
                 return UITableViewCell()
             }
-            cell.windPower.text = weatherDetails?.first?.fengli
-            cell.windDirection.text = weatherDetails?.first?.fengxiang
+            cell.windPower.text = weatherDetails?.first?.fl
+            cell.windDirection.text = weatherDetails?.first?.fx
             var days = Date().monthDay(next: 5,"MM月dd日")
             days.removeFirst()
             

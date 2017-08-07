@@ -56,6 +56,15 @@ extension String {
         return r
     }
     
+    func convertDateFormater(_ oldFormatter:String = "YYYYMMdd",new newFormatter:String = "MM月dd日") ->String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = oldFormatter
+        guard let date = formatter.date(from: self) else {
+            return "errorTime"
+        }
+        let newTime = date.monthDay(newFormatter)
+        return newTime
+    }
 }
 
 protocol Convertabel {
@@ -96,6 +105,9 @@ extension Date {
         return dataes
     }
     
+    /**
+     将每日的时分秒转换成Date
+     */
     func getDateBy(_ h:Int,_ m:Int,_ s:Int) -> Date? {
         let targetTime = h*60*60+m*60+s
         if targetTime > 24*60*60 {
@@ -158,5 +170,13 @@ extension UIView {
             }
             responder = r
         }while true
+    }
+    
+    func layerBack()  {
+        self.layer.cornerRadius = 5
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 3
+        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.backgroundColor = UIColor(white: 0.3, alpha: 0.7).cgColor
     }
 }

@@ -12,21 +12,25 @@ import HandyJSON
 struct WeatherDetail:HandyJSON {
     var date:String?
     var high:String?
-    var fengli:String?
+    var fl:String?
     var low:String?
-    var fengxiang:String?
+    var fx:String?
     var type:String?
 }
 
 struct WeatherAll:HandyJSON {
-    var city:String?
     var forecast:[WeatherDetail]?
     var ganmao:String?
     var wendu:Float?
+    var shidu:String?
+    var pm25:Int?
+    var pm10:Int?
+    var quality:String?
 }
 
 struct WeatherResult:HandyJSON {
     var data:WeatherAll?
     var status:Int?
     var message:String?
+    var city:String?
 }

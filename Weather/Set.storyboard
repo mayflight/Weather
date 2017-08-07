@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--Set View Controller-->
         <scene sceneID="14u-rR-Oec">
             <objects>
-                <viewController id="PLb-Vx-63f" customClass="SetViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PLb-Vx-63f" customClass="SetViewController" customModule="WeatherLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kGW-wA-mlX"/>
                         <viewControllerLayoutGuide type="bottom" id="UKe-6F-u7X"/>
@@ -22,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-K3-oSS" customClass="CityPickerView" customModule="Weather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="216"/>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-K3-oSS" customClass="CityPickerView" customModule="WeatherLife" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="174.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市切换" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD8-Va-xhq">
@@ -34,19 +33,37 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="2" height="-1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推送时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4B-Gd-jqo">
+                                <rect key="frame" x="31" y="256.5" width="89.5" height="174"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="whS-ll-dea" customClass="TimePickerView" customModule="WeatherLife" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="441" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.83735681999871914" green="0.92556697129999999" blue="0.84114825048264086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="y4B-Gd-jqo" firstAttribute="top" secondItem="GHu-K3-oSS" secondAttribute="bottom" constant="10" id="3uM-mE-Dby"/>
+                            <constraint firstItem="whS-ll-dea" firstAttribute="leading" secondItem="kAA-Yr-152" secondAttribute="leading" id="7CR-M8-T2T"/>
+                            <constraint firstItem="whS-ll-dea" firstAttribute="top" secondItem="y4B-Gd-jqo" secondAttribute="bottom" constant="10" id="9DD-pD-buT"/>
+                            <constraint firstAttribute="trailing" secondItem="whS-ll-dea" secondAttribute="trailing" id="GC7-b3-XA8"/>
+                            <constraint firstItem="y4B-Gd-jqo" firstAttribute="centerY" secondItem="kAA-Yr-152" secondAttribute="centerY" constant="10" id="MV2-p6-8dv"/>
+                            <constraint firstItem="UKe-6F-u7X" firstAttribute="top" secondItem="whS-ll-dea" secondAttribute="bottom" constant="10" id="OJP-JG-jlX"/>
                             <constraint firstItem="GHu-K3-oSS" firstAttribute="top" secondItem="DD8-Va-xhq" secondAttribute="bottom" constant="10" id="RxQ-G5-L6m"/>
                             <constraint firstAttribute="trailing" secondItem="GHu-K3-oSS" secondAttribute="trailing" id="Y8B-zw-VVt"/>
                             <constraint firstItem="DD8-Va-xhq" firstAttribute="top" secondItem="kGW-wA-mlX" secondAttribute="bottom" constant="15" id="YEF-Bw-soM"/>
                             <constraint firstItem="DD8-Va-xhq" firstAttribute="leading" secondItem="kAA-Yr-152" secondAttribute="leadingMargin" constant="15" id="oF7-Jv-uoL"/>
+                            <constraint firstItem="y4B-Gd-jqo" firstAttribute="leading" secondItem="DD8-Va-xhq" secondAttribute="leading" id="s8v-RT-ueq"/>
                             <constraint firstItem="GHu-K3-oSS" firstAttribute="leading" secondItem="kAA-Yr-152" secondAttribute="leading" id="vWJ-PL-SRZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityPicker" destination="GHu-K3-oSS" id="UEF-fv-xGZ"/>
+                        <outlet property="noticeTime" destination="y4B-Gd-jqo" id="Fhd-BD-BE4"/>
                         <outlet property="selectedCity" destination="DD8-Va-xhq" id="go1-1y-KbC"/>
+                        <outlet property="timePicker" destination="whS-ll-dea" id="Dew-d0-f0D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcP-la-Jup" userLabel="First Responder" sceneMemberID="firstResponder"/>

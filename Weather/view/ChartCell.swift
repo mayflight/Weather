@@ -12,8 +12,8 @@ class ChartCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor.clear
         self.contentView.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
         self.selectionStyle = .none
     }
 

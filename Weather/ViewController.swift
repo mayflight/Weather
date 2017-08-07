@@ -44,7 +44,7 @@ class ViewController:UIViewController,Networkable,Saveabel,LocalNotificationabel
             }
             self?.saveOnDisk(ViewController.citykey, city)
             self?.tableView.descript = result.data?.ganmao
-            self?.tableView.city = result.data?.city
+            self?.tableView.city = result.city
             self?.tableView.weather = result.data?.forecast?.first?.type
             self?.tableView.date = result.data?.forecast?.first?.date
             self?.tableView.temperature = result.data?.wendu

@@ -81,6 +81,7 @@ class UIAnnularProgress: UIView {
         progressLayer.strokeStart = progressProperty.progressStart
         progressLayer.strokeEnd = progressProperty.progressEnd
         layer.addSublayer(progressLayer)
+        
     }
     
     
