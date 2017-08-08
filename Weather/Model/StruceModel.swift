@@ -16,6 +16,7 @@ struct WeatherDetail:HandyJSON {
     var low:String?
     var fx:String?
     var type:String?
+    var notice:String?
 }
 
 struct WeatherAll:HandyJSON {

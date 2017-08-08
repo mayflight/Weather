@@ -25,16 +25,11 @@ class ViewController:UIViewController,Networkable,Saveabel,LocalNotificationabel
             return
         }
         refresh(city)
-        
-        guard let date = Date().getDateBy(7,20, 0) else {
-            return
-        }
-        sendNotification(title: "天气播报", body: "关注天气，健康生活。", time: date)
     }
     
 
     func refresh(_ city:String = "北京")  {
-        getRequest(url: "http://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city)"]) {[weak self] json in
+        getRequest(url: "https://www.sojson.com/open/api/weather/json.shtml", ["city":"\(city)"]) {[weak self] json in
             guard let result = WeatherResult.deserialize(from: json) else {
                 return
             }
@@ -43,7 +38,7 @@ class ViewController:UIViewController,Networkable,Saveabel,LocalNotificationabel
                 return
             }
             self?.saveOnDisk(ViewController.citykey, city)
-            self?.tableView.descript = result.data?.ganmao
+            self?.tableView.descript = result.data?.forecast?.first?.notice
             self?.tableView.city = result.city
             self?.tableView.weather = result.data?.forecast?.first?.type
             self?.tableView.date = result.data?.forecast?.first?.date

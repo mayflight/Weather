@@ -99,9 +99,10 @@ class CityPickerView: UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource{
                 return
             }
             manager.startLocation(controller) { [weak self] in
-                guard let city = $1.locality else {
+                guard let city = $1.subLocality else {
                     return
                 }
+                
                 self?.selectedCity = city
                 if self?.selectedAction != nil {
                     self?.selectedAction!(self?.selectedCity,row1,row2)

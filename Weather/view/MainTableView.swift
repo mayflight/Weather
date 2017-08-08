@@ -49,14 +49,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
         headerView.suggestLabel.text = descript
         headerView.cityLabel.text = city
         headerView.weatherLabel.text = weather
-        
-        let array =  date?.components(separatedBy: ",")
-        let first = array?.first
-        let last = array?.last
-        if first != nil && last != nil{
-            headerView.dateTimeLabel.text =  first!.convertDateFormater(new:"MM/dd") + last!
-        }
-        
+        headerView.dateTimeLabel.text =  date
         return headerView
     }
     
