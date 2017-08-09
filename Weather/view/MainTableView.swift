@@ -19,6 +19,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        backgroundColor = UIColor(white: 0.1, alpha: 0.5)
         RefreshManager.refresh(self) {
             guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
                 return

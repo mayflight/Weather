@@ -39,7 +39,6 @@
 		<key>cities</key>
 		<array>
 			<string>普陀</string>
-			<string>闸北</string>
 			<string>虹口</string>
 			<string>杨浦</string>
 			<string>卢湾</string>
@@ -360,7 +359,7 @@
 		<key>cities</key>
 		<array>
 			<string>鹤岗</string>
-			<string>大兴安岭地</string>
+			<string>大兴安岭地区</string>
 			<string>大庆</string>
 			<string>七台河</string>
 			<string>齐齐哈尔</string>

@@ -48,10 +48,12 @@ class MultipleLinesChartView: LineChartView{
         let lineLow = getLine(datas: lower!, colors: append(UIColor.init(red: 38.0/255, green: 186.0/255, blue: 206.0/255, alpha: 1), 5), text: "最低温度")
         let data = LineChartData(dataSets: [lineHigh,lineLow])
         data.setValueFont(UIFont.systemFont(ofSize: 10))
+        data.setValueTextColor(UIColor.white)
         self.data = data
     }
     
     func getLine(datas:[Double],colors:[UIColor],text:String) -> LineChartDataSet {
+        
         let dataEntrys:[ChartDataEntry] = datas.enumerated().map { (index,value) -> ChartDataEntry in
             return ChartDataEntry(x: Double(index), y: value)
         }

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 yadong.ye. All rights reserved.
 //
 
-//http://www.sojson.com/open/api/weather/json.shtml?city=杭州
+//http://www.sojson.com/open/api/weather/json.shtml?city=澳门
 
 import UIKit
 import CoreLocation

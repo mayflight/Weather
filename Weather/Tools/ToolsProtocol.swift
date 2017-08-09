@@ -79,6 +79,11 @@ extension Convertabel {
         if string == nil {
             return 0
         }
+        let first = string?.components(separatedBy: ".").first
+        if first != nil {
+            return first!.getDouble()
+        }
+        
         return string!.getDouble()
     }
 }
@@ -116,19 +121,12 @@ extension Date {
         let currentdate = self.monthDay("HH,mm,ss").components(separatedBy: ",").map(){
             return Int($0)
         }
-        let currentTime = currentdate.enumerated().reduce(0) {
-            var result = $0
-            if $1.element == nil {
-                return result
+        let multiple = [3600,60,1]
+        let currentTime = zip(currentdate, multiple).reduce(0){
+            guard let time = $1.0 else {
+                return $0
             }
-            if $1.offset == 0 {
-                result += $1.element!*60*60
-            }else if $1.offset == 1 {
-                result += $1.element!*60
-            }else if $1.offset == 2 {
-                result += $1.element!
-            }
-            return result
+            return $0 + $1.1 * time
         }
         if targetTime >= currentTime {
             return Date(timeInterval: TimeInterval(targetTime-currentTime), since: self)

@@ -36,19 +36,21 @@ class WindCell: UITableViewCell,BezierPathAnimateable,Sizeable {
     }
     
     func updateContent(_ days:[String]?,_ weathers:[String?]?)  {
-        var daysLabels = [oneDay,twoDay,threeDay,fourDay]
-        var weatherLabels = [oneWeather,twoWeather,threeWeather,fourWeather]
-        _ =  days?.enumerated().map(){
-            if $0 < days!.count {
-                daysLabels[$0]?.text = $1
-            }
+        let daysLabels = [oneDay,twoDay,threeDay,fourDay]
+        let weatherLabels = [oneWeather,twoWeather,threeWeather,fourWeather]
+        guard let day = days else {
+            return
         }
-        _ = weathers?.enumerated().map(){
-            if $0 < weathers!.count {
-                weatherLabels[$0]?.text = $1
-            }
+        guard let weather = weathers else {
+            return
         }
-    
+        _ = zip(daysLabels,day).map(){
+            $0.0?.text = $0.1
+        }
+        _ = zip(weatherLabels, weather).map() {
+            $0.0?.text = $0.1
+        }
+
     }
     
 }

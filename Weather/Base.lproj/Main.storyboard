@@ -20,19 +20,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="9M4-BX-Ppg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RMX-dt-XMo" customClass="MainTableView" customModule="WeatherLife" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.87640852410000003" green="0.92728394270000003" blue="0.62511464569999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.099758090101522812" green="0.099758090101522812" blue="0.099758090101522812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="0.85757028831100723" green="1" blue="0.83610560740417683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.92556697129999999" green="0.89416358650000005" blue="0.30977721740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9M4-BX-Ppg" firstAttribute="leading" secondItem="RMX-dt-XMo" secondAttribute="leading" id="0s7-EH-1zP"/>
                             <constraint firstItem="RMX-dt-XMo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Q8-lQ-EJw"/>
+                            <constraint firstItem="9M4-BX-Ppg" firstAttribute="trailing" secondItem="RMX-dt-XMo" secondAttribute="trailing" id="GwW-1c-ah3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RMX-dt-XMo" secondAttribute="bottom" id="Jh3-ja-3iS"/>
                             <constraint firstAttribute="trailing" secondItem="RMX-dt-XMo" secondAttribute="trailing" id="O8X-AL-MqI"/>
+                            <constraint firstItem="9M4-BX-Ppg" firstAttribute="top" secondItem="RMX-dt-XMo" secondAttribute="top" id="e0W-bP-jEW"/>
                             <constraint firstItem="RMX-dt-XMo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eS0-zG-qdU"/>
+                            <constraint firstItem="9M4-BX-Ppg" firstAttribute="bottom" secondItem="RMX-dt-XMo" secondAttribute="bottom" id="nlE-R2-LjC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,4 +51,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="620" height="845"/>
+    </resources>
 </document>
