@@ -56,7 +56,7 @@ class MainTableView:UITableView,UITableViewDataSource,UITableViewDelegate,Conver
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ViewController else {
+        guard let controller = self.getController() as? ViewController else {
                 return
         }
         controller.transiton()

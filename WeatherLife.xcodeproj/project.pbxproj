@@ -17,10 +17,12 @@
 		CCA40C191F223572002B1273 /* EnumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C181F223572002B1273 /* EnumModel.swift */; };
 		CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */; };
 		CCCC91561F210CA6003ACCA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */; };
-		CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91571F210CA6003ACCA2 /* ViewController.swift */; };
 		CCCC915D1F210CA6003ACCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */; };
 		CCCC916B1F210CA6003ACCA2 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC916A1F210CA6003ACCA2 /* WeatherTests.swift */; };
 		CCCC91761F210CA6003ACCA2 /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */; };
+		E60C11641F3D8832008BDF5A /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C11621F3D8832008BDF5A /* SetViewController.swift */; };
+		E60C11651F3D8832008BDF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C11631F3D8832008BDF5A /* ViewController.swift */; };
+		E60C11671F3D88E1008BDF5A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C11661F3D88E1008BDF5A /* TabBarController.swift */; };
 		E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */; };
 		E6196FD31F2ACE6800370667 /* NetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD21F2ACE6800370667 /* NetProtocol.swift */; };
 		E6196FD71F2ADCE200370667 /* AnimateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6196FD51F2ADCE200370667 /* AnimateManager.swift */; };
@@ -31,7 +33,6 @@
 		E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6379E851F2B3525007F3BC1 /* RefreshManager.swift */; };
 		E667324A1F38456400519586 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66732491F38456400519586 /* TimePickerView.swift */; };
 		E67CEADC1F33100E00B021B0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67CEADB1F33100E00B021B0 /* Launch Screen.storyboard */; };
-		E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */; };
 		E68E2ECD1F2F0FD900857CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ECB1F2F0FD900857CC4 /* Main.storyboard */; };
 		E68E2ECF1F2F0FE700857CC4 /* Set.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */; };
 		E68E2ED11F2F102C00857CC4 /* GestureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */; };
@@ -215,7 +216,6 @@
 		CCA40C541F22413A002B1273 /* UIAnnularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnnularProgress.swift; sourceTree = "<group>"; };
 		CCCC91521F210CA6003ACCA2 /* WeatherLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCCC91571F210CA6003ACCA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCCC915C1F210CA6003ACCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCCC91611F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCCC91661F210CA6003ACCA2 /* WeatherLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +224,9 @@
 		CCCC91711F210CA6003ACCA2 /* WeatherLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC91751F210CA6003ACCA2 /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		CCCC91771F210CA6003ACCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E60C11621F3D8832008BDF5A /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		E60C11631F3D8832008BDF5A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E60C11661F3D88E1008BDF5A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E6196FC21F2ACE3100370667 /* AnimateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateProtocol.swift; sourceTree = "<group>"; };
 		E6196FD21F2ACE6800370667 /* NetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetProtocol.swift; sourceTree = "<group>"; };
 		E6196FD51F2ADCE200370667 /* AnimateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateManager.swift; sourceTree = "<group>"; };
@@ -234,7 +237,6 @@
 		E66732491F38456400519586 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		E667325A1F38487500519586 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E67CEADB1F33100E00B021B0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		E68E2ECC1F2F0FD900857CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E68E2ECE1F2F0FE700857CC4 /* Set.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Set.storyboard; sourceTree = "<group>"; };
 		E68E2ED01F2F102C00857CC4 /* GestureProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureProtocol.swift; sourceTree = "<group>"; };
@@ -326,8 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				CCCC91551F210CA6003ACCA2 /* AppDelegate.swift */,
-				CCCC91571F210CA6003ACCA2 /* ViewController.swift */,
-				E68E2EB71F2F04FF00857CC4 /* SetViewController.swift */,
+				E60C11611F3D8832008BDF5A /* controller */,
 				E6B1A0931F26F0C400633EC8 /* Tools */,
 				CC6227FB1F248FF1007FC5FB /* depends */,
 				CCA40C171F223572002B1273 /* Model */,
@@ -360,6 +361,16 @@
 				CCCC91771F210CA6003ACCA2 /* Info.plist */,
 			);
 			path = WeatherUITests;
+			sourceTree = "<group>";
+		};
+		E60C11611F3D8832008BDF5A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E60C11621F3D8832008BDF5A /* SetViewController.swift */,
+				E60C11631F3D8832008BDF5A /* ViewController.swift */,
+				E60C11661F3D88E1008BDF5A /* TabBarController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		E6196FD41F2ADCE200370667 /* Transiton */ = {
@@ -716,22 +727,23 @@
 			files = (
 				E6DF7B021F345CD7000C35FA /* LocalNotificationProtocol.swift in Sources */,
 				CC6228141F249954007FC5FB /* MultipleLinesChartView.swift in Sources */,
-				E68E2EB81F2F04FF00857CC4 /* SetViewController.swift in Sources */,
 				E6B1A0901F26E65100633EC8 /* WindCell.swift in Sources */,
-				CCCC91581F210CA6003ACCA2 /* ViewController.swift in Sources */,
 				CCA40C551F22413A002B1273 /* UIAnnularProgress.swift in Sources */,
 				E6379E861F2B3525007F3BC1 /* RefreshManager.swift in Sources */,
 				E667324A1F38456400519586 /* TimePickerView.swift in Sources */,
+				E60C11651F3D8832008BDF5A /* ViewController.swift in Sources */,
 				CCA40C0F1F223248002B1273 /* TemperatureCell.swift in Sources */,
 				E6196FC31F2ACE3100370667 /* AnimateProtocol.swift in Sources */,
 				E6196FDA1F2ADFD000370667 /* LocationManager.swift in Sources */,
 				E68E2ED51F2F1D4E00857CC4 /* CityPickerView.swift in Sources */,
 				CCA40C191F223572002B1273 /* EnumModel.swift in Sources */,
+				E60C11641F3D8832008BDF5A /* SetViewController.swift in Sources */,
 				E6196FD31F2ACE6800370667 /* NetProtocol.swift in Sources */,
 				E6B1A0951F26F0EE00633EC8 /* ToolsProtocol.swift in Sources */,
 				E6196FD71F2ADCE200370667 /* AnimateManager.swift in Sources */,
 				E6B1A0971F27346B00633EC8 /* StruceModel.swift in Sources */,
 				CC6227EE1F2485B4007FC5FB /* ChartCell.swift in Sources */,
+				E60C11671F3D88E1008BDF5A /* TabBarController.swift in Sources */,
 				E6E631811F219B9A005FAD1D /* HeaderView.swift in Sources */,
 				E6196FD81F2ADCE200370667 /* TransitionAnimateProtocol.swift in Sources */,
 				E68E2ED11F2F102C00857CC4 /* GestureProtocol.swift in Sources */,

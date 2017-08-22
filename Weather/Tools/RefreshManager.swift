@@ -29,6 +29,7 @@ class RefreshManager: NSObject {
         if self.action != nil {
             self.action!()
         }
+        
     }
     
 }
